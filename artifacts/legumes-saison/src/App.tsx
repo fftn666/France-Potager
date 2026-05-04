@@ -10,7 +10,6 @@ import Home from "@/pages/Home";
 import MarketMap from "@/pages/MarketMap";
 import SowingCalendar from "@/pages/SowingCalendar";
 import GardenPlanner from "@/pages/GardenPlanner";
-import SeedExchange from "@/pages/SeedExchange";
 import CarbonCalc from "@/pages/CarbonCalc";
 import PlantList from "@/pages/PlantList";
 import "leaflet/dist/leaflet.css";
@@ -26,7 +25,6 @@ function Nav() {
     { href: "/semis", label: "Semis" },
     { href: "/plantes", label: "Plantes" },
     { href: "/potager", label: "Potager" },
-    { href: "/graines", label: "Graines" },
     { href: "/carbone", label: "Carbone" },
     { href: "/marches", label: "Marchés" },
   ];
@@ -77,7 +75,6 @@ function Router() {
         <Route path="/semis" component={SowingCalendar} />
         <Route path="/plantes" component={PlantList} />
         <Route path="/potager" component={GardenPlanner} />
-        <Route path="/graines" component={SeedExchange} />
         <Route path="/carbone" component={CarbonCalc} />
         <Route path="/marches" component={MarketMap} />
         <Route component={NotFound} />
