@@ -1,0 +1,103 @@
+1. Calendrier de semis interactif par zone géographique
+Objectif : Afficher un calendrier mensuel indiquant quand semer, repiquer et récolter, adapté à la zone climatique de l'utilisateur.
+Comportement attendu :
+
+Au chargement, détecter la position de l'utilisateur (géolocalisation navigateur ou saisie manuelle de ville/département).
+Attribuer automatiquement une zone climatique parmi : Nord (au-dessus de la Loire), Centre, Sud (Méditerranée + Aquitaine), Montagne.
+Afficher un tableau 12 mois × légumes avec des pastilles colorées :
+
+🟢 Semis en intérieur
+🟡 Semis en extérieur / pleine terre
+🔵 Repiquage
+🔴 Récolte
+
+
+Permettre de switcher manuellement entre les zones via un sélecteur.
+Les données de semis doivent couvrir au minimum : tomate, courgette, carotte, laitue, haricot, radis, poireau, oignon, épinard, basilic, persil, concombre.
+
+Stack suggérée : tableau HTML/CSS responsive ou grille CSS. Données en JSON statique.
+
+2. Fiches plantes détaillées
+Objectif : Chaque légume/plante dispose d'une fiche modale ou page dédiée avec toutes les infos clés.
+Contenu de chaque fiche :
+
+Nom commun + nom latin
+Icône ou illustration (emoji suffit)
+Associations bénéfiques (ex : tomate + basilic ✅, tomate + fenouil ❌)
+Ennemis naturels / nuisibles (pucerons, limaces, mildiou…)
+Besoins : ensoleillement ☀️, arrosage 💧, type de sol
+Calendrier rapide : semis → récolte en nombre de semaines
+Conseils pratiques (2-3 lignes max)
+
+UX : clic sur un légume dans le calendrier ou dans une liste → ouvre la fiche en modal ou panneau latéral.
+Données à créer : JSON avec au moins 12 plantes, chacune avec tous les champs ci-dessus.
+
+3. Planificateur de potager (grille drag-and-drop)
+Objectif : L'utilisateur dessine son carré potager en plaçant des légumes sur une grille.
+Fonctionnalités :
+
+Grille configurable : de 3×3 à 8×8 cases (chaque case = 50×50 cm par défaut).
+Palette de légumes à gauche : glisser-déposer une plante sur une case.
+Affichage de la plante dans la case (emoji + nom court).
+Alertes d'association : si deux plantes incompatibles sont côte à côte → bordure rouge + tooltip d'avertissement.
+Suggestions : si une case est vide à côté d'une plante sélectionnée → suggérer des compagnons bénéfiques.
+Bouton « Réinitialiser » et bouton « Exporter en image » (screenshot via html2canvas).
+
+Stack suggérée : drag-and-drop natif HTML5 ou bibliothèque légère (SortableJS). Pas de framework lourd.
+
+4. Bourse d'échange de graines
+Objectif : Permettre aux utilisateurs de proposer ou rechercher des graines à échanger localement.
+Fonctionnalités :
+
+Formulaire de publication : nom de la plante, variété, quantité disponible, département, contact (email ou pseudo).
+Liste des annonces avec filtre par plante et par département.
+Chaque annonce affiche : plante 🌱, variété, localisation, date de publication, bouton "Contacter".
+Bouton "Contacter" ouvre un lien mailto pré-rempli.
+Pas de compte requis — formulaire simple.
+
+Stockage : localStorage pour la démo (les annonces persistent dans le navigateur). Prévoir une structure JSON propre pour migration future vers une vraie base de données.
+Modération : Ajouter un bouton "Signaler cette annonce" (envoi d'un email à l'admin pour la démo).
+
+5. Calculateur d'empreinte carbone évitée
+Objectif : Montrer à l'utilisateur combien de CO₂ il économise en consommant local plutôt qu'importé.
+Fonctionnement :
+
+L'utilisateur sélectionne des légumes dans une liste et indique une quantité en kg par semaine.
+Pour chaque légume, comparer :
+
+Local de saison : empreinte de référence basse (ex. tomate locale = 0.3 kg CO₂/kg)
+Importé hors saison : empreinte haute (ex. tomate espagne/avion = 3.5 kg CO₂/kg)
+
+
+Calcul automatique : (empreinte_importé - empreinte_local) × quantité × 52 semaines
+Affichage du résultat annuel en kg CO₂, avec équivalence visuelle (ex. "= X km en voiture", "= X trajets Paris-Marseille en TGV").
+
+Données à intégrer (source ADEME — valeurs approximatives) :
+LégumeLocal saison (kg CO₂/kg)Importé hors saison (kg CO₂/kg)Tomate0.33.5Courgette0.22.8Haricot vert0.44.0Salade0.151.8Poivron0.353.2Fraise0.55.0Carotte0.150.9Pomme de terre0.10.7
+UX : Résultat affiché en temps réel avec une jauge ou barre de progression. Badge "Impact Positif 🌍" si économie > 100 kg CO₂/an.
+
+6. Saisonnalité par région (personnalisation géographique globale)
+Objectif : Toute l'app s'adapte à la région de l'utilisateur — pas seulement le calendrier.
+Fonctionnalités :
+
+Sélecteur de région persistant (localStorage) visible en haut de page : Nord | Centre | Sud | Montagne.
+Sur la page d'accueil : afficher les légumes de saison du mois en cours filtrés par région.
+Sur la carte des marchés : centrer automatiquement la carte sur la région sélectionnée.
+Dans les fiches plantes : adapter les dates de semis/récolte à la région.
+Décalage appliqué selon les zones :
+
+Nord : +2 à +3 semaines vs Centre
+Sud Méditerranée : -2 à -3 semaines (saison plus longue)
+Montagne : +3 à +4 semaines (saison plus courte)
+
+
+
+Persistance : Sauvegarder le choix en localStorage pour qu'il soit mémorisé à la prochaine visite.
+
+Notes générales pour l'implémentation
+
+Garder le design cohérent avec l'existant (couleurs, typographie, style des cartes).
+Toutes les fonctionnalités doivent être mobile-first et responsive.
+Utiliser des données statiques JSON pour commencer — pas besoin de backend pour la démo.
+Ajouter chaque fonctionnalité comme un nouvel onglet ou section dans la navigation existante.
+Tester sur mobile (largeur 375px) avant de valider chaque fonctionnalité.

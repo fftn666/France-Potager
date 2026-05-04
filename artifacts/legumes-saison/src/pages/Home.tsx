@@ -4,12 +4,14 @@ import { VegetableCard } from "@/components/VegetableCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sprout, Utensils } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePlantModal } from "@/components/PlantModal";
 
 export default function Home() {
-  // Default to May (index 4) for "mai 2026" requirement
   const [selectedMonth, setSelectedMonth] = useState(4);
   const [mode, setMode] = useState<"consommer" | "planter">("consommer");
   const [seasonFilter, setSeasonFilter] = useState<string | null>(null);
+  
+  const { openPlant, PlantModalComponent } = usePlantModal();
 
   const monthData = MONTHS[selectedMonth];
   const activeList = mode === "consommer" ? monthData.toConsume : monthData.toPlant;
@@ -141,7 +143,8 @@ export default function Home() {
                     key={`${veg.name}-${mode}-${selectedMonth}`} 
                     vegetable={veg} 
                     mode={mode} 
-                    index={index} 
+                    index={index}
+                    onOpenDetail={openPlant}
                   />
                 ))}
               </AnimatePresence>
@@ -149,6 +152,8 @@ export default function Home() {
           )}
         </section>
       </main>
+      
+      <PlantModalComponent />
     </div>
   );
 }

@@ -8,6 +8,7 @@ interface VegetableCardProps {
   vegetable: VegetableInfo;
   mode: "consommer" | "planter";
   index: number;
+  onOpenDetail?: (name: string) => void;
 }
 
 const getSeasonIcon = (season: string) => {
@@ -25,7 +26,7 @@ const getSeasonIcon = (season: string) => {
   }
 };
 
-export function VegetableCard({ vegetable, mode, index }: VegetableCardProps) {
+export function VegetableCard({ vegetable, mode, index, onOpenDetail }: VegetableCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -34,7 +35,10 @@ export function VegetableCard({ vegetable, mode, index }: VegetableCardProps) {
       transition={{ duration: 0.4, delay: index * 0.05 }}
       data-testid={`card-vegetable-${vegetable.name}`}
     >
-      <Card className="group relative h-full overflow-hidden border border-border/50 bg-card hover:border-primary/30 hover:shadow-md transition-all duration-300">
+      <Card 
+        className={`group relative h-full overflow-hidden border border-border/50 bg-card hover:border-primary/30 hover:shadow-md transition-all duration-300 ${onOpenDetail ? 'cursor-pointer' : ''}`}
+        onClick={() => onOpenDetail?.(vegetable.name)}
+      >
         <div className="p-5 flex flex-col h-full">
           <div className="flex justify-between items-start mb-4">
             <h3 className="font-serif text-xl font-medium text-foreground group-hover:text-primary transition-colors">
