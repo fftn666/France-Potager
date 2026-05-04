@@ -86,7 +86,7 @@ function Tooltip({ children, content }: { children: React.ReactNode; content: st
   return (
     <div className="relative group/tooltip flex items-center justify-center">
       {children}
-      <div className="absolute bottom-full mb-2 opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none bg-popover text-popover-foreground text-xs px-2 py-1 rounded border shadow-sm whitespace-nowrap z-50">
+      <div className="absolute right-full mr-2 top-1/2 -translate-y-1/2 opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none bg-popover text-popover-foreground text-xs px-2 py-1 rounded border shadow-sm whitespace-nowrap z-50">
         {content}
       </div>
     </div>
