@@ -58,7 +58,7 @@ export function VegetableCard({ vegetable, mode, index }: VegetableCardProps) {
             {mode === "consommer" && vegetable.prepAdvice && (
               <div className="flex items-start gap-2 text-foreground/80 pt-2 border-t border-border/50">
                 <ChefHat className="w-4 h-4 mt-0.5 shrink-0 text-secondary" />
-                <span className="leading-snug">{vegetable.prepAdvice}</span>
+                <span className="leading-snug font-semibold">{vegetable.prepAdvice}</span>
               </div>
             )}
 
