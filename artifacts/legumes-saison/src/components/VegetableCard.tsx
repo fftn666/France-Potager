@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { VegetableInfo } from "@/data/vegetables";
-import { Sprout, ChefHat, Clock, Sun, CloudRain, Snowflake, Leaf } from "lucide-react";
+import { Sprout, ChefHat, Clock, Sun, CloudRain, Snowflake, Leaf, CalendarCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 interface VegetableCardProps {
   vegetable: VegetableInfo;
@@ -31,6 +30,7 @@ export function VegetableCard({ vegetable, mode, index }: VegetableCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       data-testid={`card-vegetable-${vegetable.name}`}
     >
@@ -48,10 +48,12 @@ export function VegetableCard({ vegetable, mode, index }: VegetableCardProps) {
           </div>
 
           <div className="flex-grow space-y-3 text-sm">
-            <div className="flex items-start gap-2 text-muted-foreground">
-              <Clock className="w-4 h-4 mt-0.5 shrink-0" />
-              <span>{vegetable.storage}</span>
-            </div>
+            {mode === "consommer" && (
+              <div className="flex items-start gap-2 text-muted-foreground">
+                <Clock className="w-4 h-4 mt-0.5 shrink-0" />
+                <span>{vegetable.storage}</span>
+              </div>
+            )}
 
             {mode === "consommer" && vegetable.prepAdvice && (
               <div className="flex items-start gap-2 text-foreground/80 pt-2 border-t border-border/50">
@@ -61,9 +63,16 @@ export function VegetableCard({ vegetable, mode, index }: VegetableCardProps) {
             )}
 
             {mode === "planter" && vegetable.plantAdvice && (
-              <div className="flex items-start gap-2 text-foreground/80 pt-2 border-t border-border/50">
+              <div className="flex items-start gap-2 text-foreground/80">
                 <Sprout className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
                 <span className="leading-snug">{vegetable.plantAdvice}</span>
+              </div>
+            )}
+
+            {mode === "planter" && vegetable.harvestTime && (
+              <div className="flex items-start gap-2 text-foreground/80 pt-2 border-t border-border/50">
+                <CalendarCheck className="w-4 h-4 mt-0.5 shrink-0 text-amber-600" />
+                <span className="leading-snug">{vegetable.harvestTime}</span>
               </div>
             )}
           </div>
@@ -73,7 +82,6 @@ export function VegetableCard({ vegetable, mode, index }: VegetableCardProps) {
   );
 }
 
-// Simple internal tooltip for the card since TooltipProvider is in App.tsx
 function Tooltip({ children, content }: { children: React.ReactNode; content: string }) {
   return (
     <div className="relative group/tooltip flex items-center justify-center">
