@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
-import { ALL_PLANTS, Plant, getPlantById, getPlantByName, PlantCategory } from '@/data/db';
+import { useState } from 'react';
+import { useLocation } from 'wouter';
+import { ALL_PLANTS, Plant, getPlantById, getPlantByName } from '@/data/db';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
-import { Check, X, AlertTriangle, Sun, Droplets, Mountain, Clock, Sprout, CalendarCheck } from 'lucide-react';
+import { Check, X, AlertTriangle, Sun, Droplets, Mountain, Clock, Sprout, CalendarCheck, Ruler, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -29,19 +30,31 @@ export function usePlantModal() {
     }
   };
 
-  const PlantModalComponent = () => (
+  const PlantModalComponent = () => {
+    const [, navigate] = useLocation();
+
+    const goToFamily = () => {
+      setOpen(false);
+      setTimeout(() => navigate(`/plantes?famille=${encodeURIComponent(plant?.categorie ?? '')}`), 150);
+    };
+
+    return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetContent className="w-full sm:max-w-md p-0 flex flex-col">
         {plant && (
           <ScrollArea className="h-full px-6 py-6">
             <div className="space-y-6">
               <SheetHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <SheetTitle className="text-3xl text-primary font-serif">{plant.nom}</SheetTitle>
-                    <SheetDescription className="italic text-lg">{plant.nom_latin}</SheetDescription>
-                  </div>
-                  <Badge variant="secondary" className="capitalize">{plant.categorie}</Badge>
+                <div>
+                  <SheetTitle className="text-3xl text-primary font-serif">{plant.nom}</SheetTitle>
+                  <SheetDescription className="italic text-lg mb-3">{plant.nom_latin}</SheetDescription>
+                  <button
+                    onClick={goToFamily}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 bg-muted hover:bg-muted/70 text-muted-foreground hover:text-foreground text-xs font-medium rounded-full border border-border/60 transition-colors group"
+                  >
+                    {plant.categorie}
+                    <ExternalLink className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
+                  </button>
                 </div>
               </SheetHeader>
 
@@ -87,7 +100,7 @@ export function usePlantModal() {
                     </div>
                   </div>
                   <div className="flex items-start gap-2 bg-muted/30 p-2 rounded-lg">
-                    <div className="w-4 h-4 mt-0.5 flex items-center justify-center shrink-0">📏</div>
+                    <Ruler className="w-4 h-4 text-muted-foreground mt-0.5 shrink-0" />
                     <div>
                       <div className="text-xs text-muted-foreground font-medium">Espacement</div>
                       <div className="text-sm">{plant.culture.espacement}</div>
@@ -201,7 +214,8 @@ export function usePlantModal() {
         )}
       </SheetContent>
     </Sheet>
-  );
+    );
+  };
 
   return { openPlant, closePlant, PlantModalComponent };
 }

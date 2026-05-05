@@ -1,9 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { ALL_PLANTS } from '@/data/db';
 import { usePlantModal } from '@/components/PlantModal';
-import { Sun, Droplets, Search } from 'lucide-react';
+import { Sun, Droplets, Search, Sprout, X } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 type FilterCategory = 'Tous' | 'Légumes' | 'Herbes aromatiques' | 'Fruits & Fleurs';
@@ -11,13 +11,25 @@ type FilterCategory = 'Tous' | 'Légumes' | 'Herbes aromatiques' | 'Fruits & Fle
 export default function PlantList() {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<FilterCategory>('Tous');
+  const [exactFamily, setExactFamily] = useState<string | null>(null);
   const { openPlant, PlantModalComponent } = usePlantModal();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const famille = params.get('famille');
+    if (famille) {
+      setExactFamily(famille);
+      setFilter('Tous');
+    }
+  }, []);
 
   const filteredPlants = useMemo(() => {
     return ALL_PLANTS.filter(p => {
       const matchSearch = p.nom.toLowerCase().includes(search.toLowerCase()) || 
                           p.nom_latin.toLowerCase().includes(search.toLowerCase());
       if (!matchSearch) return false;
+
+      if (exactFamily) return p.categorie === exactFamily;
 
       if (filter === 'Tous') return true;
       if (filter === 'Herbes aromatiques') return p.categorie === 'Herbes aromatiques';
@@ -31,7 +43,12 @@ export default function PlantList() {
       }
       return true;
     });
-  }, [search, filter]);
+  }, [search, filter, exactFamily]);
+
+  const clearExactFamily = () => {
+    setExactFamily(null);
+    window.history.replaceState({}, '', window.location.pathname);
+  };
 
   const FILTERS: FilterCategory[] = ['Tous', 'Légumes', 'Herbes aromatiques', 'Fruits & Fleurs'];
 
@@ -56,17 +73,30 @@ export default function PlantList() {
             />
           </div>
 
-          <div className="flex flex-wrap gap-2 justify-center">
-            {FILTERS.map(f => (
+          {exactFamily ? (
+            <div className="flex flex-wrap gap-2 justify-center items-center">
+              <span className="text-sm text-muted-foreground">Famille :</span>
               <button
-                key={f}
-                onClick={() => setFilter(f)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${filter === f ? 'bg-primary text-primary-foreground border-primary' : 'bg-card text-muted-foreground hover:bg-muted border-border'}`}
+                onClick={clearExactFamily}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium bg-primary text-primary-foreground border border-primary"
               >
-                {f}
+                {exactFamily}
+                <X className="w-3.5 h-3.5" />
               </button>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div className="flex flex-wrap gap-2 justify-center">
+              {FILTERS.map(f => (
+                <button
+                  key={f}
+                  onClick={() => setFilter(f)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${filter === f ? 'bg-primary text-primary-foreground border-primary' : 'bg-card text-muted-foreground hover:bg-muted border-border'}`}
+                >
+                  {f}
+                </button>
+              ))}
+            </div>
+          )}
 
         </motion.div>
       </header>
@@ -108,7 +138,7 @@ export default function PlantList() {
             animate={{ opacity: 1 }}
             className="text-center py-20 text-muted-foreground flex flex-col items-center"
           >
-            <div className="text-4xl mb-4">🌱</div>
+            <Sprout className="w-12 h-12 mb-4 opacity-20" />
             <p className="text-lg font-medium">Aucune plante trouvée.</p>
             <p className="text-sm">Essayez de modifier vos filtres ou votre recherche.</p>
           </motion.div>

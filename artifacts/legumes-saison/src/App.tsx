@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useRegion, Region } from "@/hooks/use-region";
+import { Home as HomeIcon } from "lucide-react";
 
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
@@ -33,6 +34,19 @@ function Nav() {
     <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-border/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center h-14">
         <div className="flex items-center gap-1 overflow-x-auto no-scrollbar flex-1">
+          <Link
+            href="/"
+            data-testid="nav-accueil"
+            title="Accueil"
+            className={`p-2 rounded-full transition-colors shrink-0 ${
+              location === "/"
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+            }`}
+          >
+            <HomeIcon className="w-4 h-4" />
+          </Link>
+          <div className="w-px h-5 bg-border/60 mx-1 shrink-0" />
           {links.map((link) => (
             <Link
               key={link.href}

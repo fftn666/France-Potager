@@ -80,6 +80,15 @@ export default function SowingCalendar() {
           ))}
         </div>
 
+        <div className="mb-4 flex flex-wrap gap-4 justify-center bg-card px-4 py-3 rounded-xl border border-border/50 shadow-sm">
+          {Object.entries(ACTION_COLORS).map(([key, {bg, label}]) => (
+            <div key={key} className="flex items-center gap-2 text-sm font-medium text-foreground">
+              <div className={`w-3.5 h-3.5 rounded-full ${bg} shadow-sm shrink-0`} />
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+
         <div className="overflow-x-auto border border-border/50 rounded-xl bg-card shadow-sm flex-1">
           <table className="w-full text-sm text-left min-w-[800px] border-collapse relative">
             <thead className="bg-muted/80 sticky top-0 z-20 border-b border-border/50">
@@ -117,14 +126,6 @@ export default function SowingCalendar() {
           </table>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-6 justify-center bg-card p-4 rounded-xl border border-border/50 shadow-sm">
-          {Object.entries(ACTION_COLORS).map(([key, {bg, label}]) => (
-            <div key={key} className="flex items-center gap-2 text-sm font-medium text-foreground">
-              <div className={`w-4 h-4 rounded-full ${bg} shadow-sm`} />
-              <span>{label}</span>
-            </div>
-          ))}
-        </div>
       </main>
       
       <PlantModalComponent />
