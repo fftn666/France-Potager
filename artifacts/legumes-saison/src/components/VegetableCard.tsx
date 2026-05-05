@@ -1,52 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { VegetableInfo } from "@/data/vegetables";
-import { Sprout, ChefHat, Clock, Sun, CloudRain, Snowflake, Leaf, CalendarCheck } from "lucide-react";
+import { Plant } from "@/data/db";
+import { Sprout, Clock, Sun, CalendarCheck, Leaf, CloudRain, Snowflake } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface VegetableCardProps {
-  vegetable: VegetableInfo;
+  plant: Plant;
   mode: "consommer" | "planter";
   index: number;
-  onOpenDetail?: (name: string) => void;
+  onOpenDetail?: (id: string) => void;
 }
 
-const getSeasonIcon = (season: string) => {
-  switch (season) {
-    case "Printemps":
-      return <CloudRain className="w-4 h-4 text-blue-500" />;
-    case "Été":
-      return <Sun className="w-4 h-4 text-yellow-500" />;
-    case "Automne":
-      return <Leaf className="w-4 h-4 text-orange-500" />;
-    case "Hiver":
-      return <Snowflake className="w-4 h-4 text-blue-300" />;
-    default:
-      return <Sprout className="w-4 h-4 text-primary" />;
-  }
+const getCategoryIcon = (cat: string) => {
+  if (cat.includes("Herbes")) return <Leaf className="w-4 h-4 text-green-500" />;
+  if (cat.includes("Fruits") || cat.includes("Arbustes")) return <Sun className="w-4 h-4 text-orange-500" />;
+  return <Sprout className="w-4 h-4 text-primary" />;
 };
 
-export function VegetableCard({ vegetable, mode, index, onOpenDetail }: VegetableCardProps) {
+export function VegetableCard({ plant, mode, index, onOpenDetail }: VegetableCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
-      data-testid={`card-vegetable-${vegetable.name}`}
+      data-testid={`card-vegetable-${plant.id}`}
     >
       <Card 
         className={`group relative h-full overflow-hidden border border-border/50 bg-card hover:border-primary/30 hover:shadow-md transition-all duration-300 ${onOpenDetail ? 'cursor-pointer' : ''}`}
-        onClick={() => onOpenDetail?.(vegetable.name)}
+        onClick={() => onOpenDetail?.(plant.id)}
       >
         <div className="p-5 flex flex-col h-full">
           <div className="flex justify-between items-start mb-4">
             <h3 className="font-serif text-xl font-medium text-foreground group-hover:text-primary transition-colors">
-              {vegetable.name}
+              {plant.nom}
             </h3>
-            <Tooltip content={vegetable.season}>
+            <Tooltip content={plant.categorie}>
               <div className="p-2 bg-muted rounded-full text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-colors">
-                {getSeasonIcon(vegetable.season)}
+                {getCategoryIcon(plant.categorie)}
               </div>
             </Tooltip>
           </div>
@@ -55,28 +46,28 @@ export function VegetableCard({ vegetable, mode, index, onOpenDetail }: Vegetabl
             {mode === "consommer" && (
               <div className="flex items-start gap-2 text-muted-foreground">
                 <Clock className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>{vegetable.storage}</span>
+                <span className="line-clamp-2">{plant.conservation}</span>
               </div>
             )}
 
-            {mode === "consommer" && vegetable.prepAdvice && (
-              <div className="flex items-start gap-2 text-foreground/80 pt-2 border-t border-border/50">
-                <ChefHat className="w-4 h-4 mt-0.5 shrink-0 text-secondary" />
-                <span className="leading-snug font-semibold">{vegetable.prepAdvice}</span>
-              </div>
-            )}
-
-            {mode === "planter" && vegetable.plantAdvice && (
+            {mode === "planter" && (
               <div className="flex items-start gap-2 text-foreground/80">
-                <Sprout className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
-                <span className="leading-snug">{vegetable.plantAdvice}</span>
+                <Sun className="w-4 h-4 mt-0.5 shrink-0 text-amber-500" />
+                <span className="leading-snug line-clamp-2">{plant.culture.exposition}</span>
               </div>
             )}
 
-            {mode === "planter" && vegetable.harvestTime && (
+            {mode === "planter" && plant.conseils && plant.conseils.length > 0 && (
+              <div className="flex items-start gap-2 text-foreground/80 pt-2 border-t border-border/50">
+                <Sprout className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
+                <span className="leading-snug line-clamp-2">{plant.conseils[0]}</span>
+              </div>
+            )}
+
+            {mode === "planter" && plant.culture.temps_recolte_semaines && (
               <div className="flex items-start gap-2 text-foreground/80 pt-2 border-t border-border/50">
                 <CalendarCheck className="w-4 h-4 mt-0.5 shrink-0 text-amber-600" />
-                <span className="leading-snug">{vegetable.harvestTime}</span>
+                <span className="leading-snug">{plant.culture.temps_recolte_semaines}</span>
               </div>
             )}
           </div>

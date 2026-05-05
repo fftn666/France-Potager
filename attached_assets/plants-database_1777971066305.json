@@ -1,0 +1,2449 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "Base de données complète des légumes, fruits et herbes aromatiques pour potager — adaptée au climat français avec zones Nord/Centre/Sud/Montagne",
+    "zones": {
+      "Nord": "Au-dessus de la Loire, Normandie, Bretagne, Hauts-de-France",
+      "Centre": "Île-de-France, Pays de la Loire, Bourgogne, Alsace",
+      "Sud": "PACA, Languedoc, Occitanie, Aquitaine, Corse",
+      "Montagne": "Alpes, Pyrénées, Massif Central (altitude > 600m)"
+    },
+    "calendrier_note": "Les mois sont en chiffres (1=Janvier, 12=Décembre). Les décalages par zone sont indiqués séparément.",
+    "decalages_zone": {
+      "Nord": "+2 semaines vs Centre",
+      "Centre": "référence",
+      "Sud": "-3 semaines vs Centre (saison plus longue)",
+      "Montagne": "+4 semaines vs Centre"
+    }
+  },
+
+  "categories": [
+    "Légumes fruits",
+    "Légumes racines",
+    "Légumes feuilles",
+    "Légumes bulbes",
+    "Légumes tiges",
+    "Légumineuses",
+    "Cucurbitacées",
+    "Herbes aromatiques",
+    "Fruits rouges",
+    "Arbustes fruitiers"
+  ],
+
+  "plants": [
+
+    {
+      "id": "tomate",
+      "nom": "Tomate",
+      "nom_latin": "Solanum lycopersicum",
+      "categorie": "Légumes fruits",
+      "emoji": "🍅",
+      "varietes": [
+        { "nom": "Cœur de Bœuf", "type": "ancienne", "description": "Grosse tomate charnue, peu juteuse, idéale pour les salades" },
+        { "nom": "Cerise", "type": "ancienne", "description": "Petits fruits sucrés, très productifs, parfaits pour l'apéro" },
+        { "nom": "Saint-Pierre", "type": "ancienne", "description": "Variété classique, équilibrée, bonne pour cuisiner" },
+        { "nom": "Andine Cornue", "type": "ancienne", "description": "Allongée, peu de jus, parfaite pour coulis et confits" },
+        { "nom": "Noire de Crimée", "type": "ancienne", "description": "Couleur pourpre, saveur complexe et sucrée" },
+        { "nom": "Green Zebra", "type": "ancienne", "description": "Rayée verte-jaune, goût acidulé rafraîchissant" },
+        { "nom": "Roma", "type": "hybride", "description": "Tomate paste, chair ferme, peu de graines, idéale conserves" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "repiquage": [4, 5],
+        "plantation": [5, 6],
+        "recolte": [7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil (min. 6h/jour)",
+        "arrosage": "Régulier, éviter les à-coups (risque d'éclatement)",
+        "sol": "Riche, bien drainé, pH 6-7",
+        "espacement": "60-80 cm entre les plants",
+        "profondeur_semis": "0.5 cm",
+        "germination_jours": "7-14",
+        "temps_recolte_semaines": "70-90 jours après repiquage"
+      },
+      "associations": {
+        "benefiques": ["basilic", "persil", "carotte", "ciboulette", "tagetes"],
+        "nefastes": ["fenouil", "brassicas", "pomme_de_terre"]
+      },
+      "ravageurs": ["Mildiou", "Pucerons", "Aleurodes", "Doryphore", "Botrytis"],
+      "conseils": [
+        "Tuteurer dès 30 cm de hauteur",
+        "Ébourgeonnage régulier (enlever les gourmands) pour concentrer la sève sur les fruits",
+        "Pailler le pied pour conserver l'humidité et éviter les maladies du sol",
+        "Ne pas mouiller le feuillage pour prévenir le mildiou",
+        "Pincer le sommet fin août pour favoriser la maturation des derniers fruits"
+      ],
+      "conservation": "À température ambiante, jamais au réfrigérateur. Se conserve 1 semaine.",
+      "empreinte_carbone": { "local": 0.3, "importe": 3.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "courgette",
+      "nom": "Courgette",
+      "nom_latin": "Cucurbita pepo",
+      "categorie": "Cucurbitacées",
+      "emoji": "🥒",
+      "varietes": [
+        { "nom": "Verte de Milan", "type": "ancienne", "description": "Classique verte, productive et savoureuse" },
+        { "nom": "Ronde de Nice", "type": "ancienne", "description": "Forme ronde, idéale pour la farce" },
+        { "nom": "Jaune Dorée", "type": "ancienne", "description": "Couleur jaune, goût plus doux et décoratif" },
+        { "nom": "Tromboncino", "type": "ancienne", "description": "Forme allongée courbée, chair ferme moins aqueuse" },
+        { "nom": "Cocozelle", "type": "ancienne", "description": "Rayée vert clair et foncé, très productive" }
+      ],
+      "calendrier": {
+        "semis_interieur": [4],
+        "semis_exterieur": [5],
+        "plantation": [5, 6],
+        "recolte": [6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Abondant, surtout en été",
+        "sol": "Riche en humus, bien drainé",
+        "espacement": "80-100 cm entre les plants",
+        "profondeur_semis": "2 cm, graines sur la tranche",
+        "germination_jours": "5-10",
+        "temps_recolte_semaines": "50-60 jours après semis"
+      },
+      "associations": {
+        "benefiques": ["haricot", "mais", "capucine", "tagetes"],
+        "nefastes": ["pomme_de_terre"]
+      },
+      "ravageurs": ["Oïdium", "Pucerons", "Acariens", "Limaces (jeunes plants)"],
+      "conseils": [
+        "Récolter régulièrement pour stimuler la production — une courgette oubliée stoppe la fructification",
+        "Planter au bord d'un tas de compost pour un résultat spectaculaire",
+        "Polliniser à la main en cas d'absence d'insectes (utile sous serre)",
+        "Limiter à 2-3 plants pour une famille — très productif !"
+      ],
+      "conservation": "5-7 jours au réfrigérateur. Se congèle très bien en dés blanchis.",
+      "empreinte_carbone": { "local": 0.2, "importe": 2.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "carotte",
+      "nom": "Carotte",
+      "nom_latin": "Daucus carota",
+      "categorie": "Légumes racines",
+      "emoji": "🥕",
+      "varietes": [
+        { "nom": "Nantaise", "type": "ancienne", "description": "Cylindrique, douce et croquante, la plus cultivée en France" },
+        { "nom": "Chantenay", "type": "ancienne", "description": "Courte et trapue, tolère les sols lourds" },
+        { "nom": "Longue de Meaux", "type": "ancienne", "description": "Longue et fine, sol profond et léger requis" },
+        { "nom": "Purple Haze", "type": "ancienne", "description": "Violette à l'extérieur, orange à l'intérieur, riche en anthocyanes" },
+        { "nom": "Jaune du Doubs", "type": "ancienne", "description": "Couleur jaune pâle, goût légèrement sucré" },
+        { "nom": "Colmar", "type": "ancienne", "description": "Excellente conservation, idéale pour l'hiver" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [3, 4, 5, 6, 7],
+        "recolte": [6, 7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre légère",
+        "arrosage": "Modéré, éviter l'excès (racines fourchues)",
+        "sol": "Léger, profond, sans cailloux, pH 6-7",
+        "espacement": "5 cm entre les graines, 25 cm entre les rangs",
+        "profondeur_semis": "0.5-1 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "70-80 jours après semis"
+      },
+      "associations": {
+        "benefiques": ["poireau", "oignon", "tomate", "sauge", "romarin"],
+        "nefastes": ["aneth", "betterave (compétition)"]
+      },
+      "ravageurs": ["Mouche de la carotte", "Altises", "Nématodes"],
+      "conseils": [
+        "Semer en ligne fine et bien recouvrir d'un voile anti-insectes (mouche de la carotte)",
+        "Éclaircir à 5 cm quand les plants font 5 cm de haut",
+        "Associer avec le poireau : leurs odeurs se masquent mutuellement et repoussent leurs ravageurs respectifs",
+        "Ne pas fumer (fumier frais) — provoque des racines fourchues",
+        "Butterrr légèrement pour éviter le verdissement des épaules"
+      ],
+      "conservation": "Plusieurs mois en cave dans du sable. 2-3 semaines au réfrigérateur.",
+      "empreinte_carbone": { "local": 0.15, "importe": 0.9, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "laitue",
+      "nom": "Laitue / Salade",
+      "nom_latin": "Lactuca sativa",
+      "categorie": "Légumes feuilles",
+      "emoji": "🥬",
+      "varietes": [
+        { "nom": "Merveille des Quatre Saisons", "type": "ancienne", "description": "Feuilles rouges-vertes, résistante au froid et à la chaleur" },
+        { "nom": "Reine de Mai", "type": "ancienne", "description": "Pommée verte, très tendre, idéale printemps" },
+        { "nom": "Batavia Dorée", "type": "ancienne", "description": "Feuilles croquantes, résistante à la montée en graines" },
+        { "nom": "Rouge Grenobloise", "type": "ancienne", "description": "Feuilles rouges tachetées, résistante au gel" },
+        { "nom": "Lollo Rossa", "type": "ancienne", "description": "Très frisée, décorative, pousse rapide" },
+        { "nom": "Sucrine", "type": "ancienne", "description": "Petite, croquante et sucrée, tolère la chaleur" },
+        { "nom": "Romaine Verte", "type": "ancienne", "description": "Longue, croquante, riche en nutriments" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3, 9],
+        "semis_exterieur": [3, 4, 5, 6, 7, 8],
+        "repiquage": [3, 4, 5, 9, 10],
+        "recolte": [4, 5, 6, 7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Soleil, mi-ombre en été pour éviter la montée en graines",
+        "arrosage": "Régulier, arroser au pied et non sur les feuilles",
+        "sol": "Riche, frais, bien drainé",
+        "espacement": "25-30 cm entre les plants",
+        "profondeur_semis": "0.5 cm (graines très fines, ne pas tasser)",
+        "germination_jours": "5-10",
+        "temps_recolte_semaines": "45-70 jours selon la saison"
+      },
+      "associations": {
+        "benefiques": ["radis", "carotte", "fraisier", "ciboulette"],
+        "nefastes": ["celeri", "persil (compétition)"]
+      },
+      "ravageurs": ["Limaces", "Pucerons", "Mildiou", "Fonte des semis"],
+      "conseils": [
+        "Semer échelonné toutes les 3 semaines pour une production continue",
+        "En plein été, semer à mi-ombre ou en soirée — les graines ne germent pas au-dessus de 25°C",
+        "Couper la pomme sans arracher la plante : de nouvelles feuilles repoussent souvent",
+        "Placer des granules anti-limaces bio (phosphate de fer) autour des jeunes plants"
+      ],
+      "conservation": "3-5 jours au réfrigérateur dans un torchon humide.",
+      "empreinte_carbone": { "local": 0.15, "importe": 1.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "haricot_vert",
+      "nom": "Haricot vert",
+      "nom_latin": "Phaseolus vulgaris",
+      "categorie": "Légumineuses",
+      "emoji": "🫘",
+      "varietes": [
+        { "nom": "Contender", "type": "ancienne", "description": "Nain, très productif, résistant aux maladies" },
+        { "nom": "Fin de Bagnols", "type": "ancienne", "description": "Très fin et tendre, variété ancienne réputée" },
+        { "nom": "Phénix à Cosse Violette", "type": "ancienne", "description": "Cosses violettes qui deviennent vertes à la cuisson, décoratif" },
+        { "nom": "Mangetout Beurre de Rocquencourt", "type": "ancienne", "description": "Cosse jaune, doux et croquant" },
+        { "nom": "Cobra", "type": "grimpant", "description": "Variété grimpante (2m), production étalée sur 2 mois" },
+        { "nom": "Blue Lake", "type": "grimpant", "description": "Grimpant, cosses rondes et droites, excellent en conserve" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [5, 6, 7],
+        "recolte": [7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré, surtout à la floraison",
+        "sol": "Léger, bien drainé, éviter l'excès d'azote",
+        "espacement": "8-10 cm sur le rang, 40 cm entre rangs (nain) / 50 cm (grimpant)",
+        "profondeur_semis": "3-4 cm",
+        "germination_jours": "8-12",
+        "temps_recolte_semaines": "50-60 jours après semis"
+      },
+      "associations": {
+        "benefiques": ["courgette", "mais", "carotte", "sarriette"],
+        "nefastes": ["oignon", "ail", "fenouil"]
+      },
+      "ravageurs": ["Anthracnose", "Bruches (graines)", "Pucerons noirs", "Araignées rouges"],
+      "conseils": [
+        "Ne semer qu'après les Saints de Glace (mi-mai) — très sensible au froid",
+        "Ne pas arroser sur les fleurs pour éviter la chute des boutons floraux",
+        "Récolter quand la cosse est encore tendre, avant que les graines ne se forment",
+        "La sarriette est l'association classique — repousse les pucerons noirs",
+        "Faire 2-3 semis échelonnés toutes les 3 semaines pour étaler la récolte"
+      ],
+      "conservation": "3-4 jours au réfrigérateur. Très bien en congélation après blanchiment 3 min.",
+      "empreinte_carbone": { "local": 0.4, "importe": 4.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "poireau",
+      "nom": "Poireau",
+      "nom_latin": "Allium porrum",
+      "categorie": "Légumes bulbes",
+      "emoji": "🧅",
+      "varietes": [
+        { "nom": "Monstrueux de Carentan", "type": "ancienne", "description": "Très gros, résistant au froid, hiver" },
+        { "nom": "Bleu de Solaise", "type": "ancienne", "description": "Feuilles bleues-violettes, excellent goût, très rustique" },
+        { "nom": "Varna", "type": "hybride", "description": "Précoce, été-automne, fût long et blanchi" },
+        { "nom": "Saint-Victor", "type": "ancienne", "description": "Tardif hiver, feuilles violacées par le froid" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "repiquage": [5, 6],
+        "semis_exterieur": [3, 4],
+        "recolte": [9, 10, 11, 12, 1, 2, 3]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre légère",
+        "arrosage": "Régulier, modéré",
+        "sol": "Profond, riche, frais",
+        "espacement": "15 cm sur le rang, 30 cm entre rangs",
+        "profondeur_semis": "1 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "150-180 jours (semis à récolte)"
+      },
+      "associations": {
+        "benefiques": ["carotte", "céleri", "tomate"],
+        "nefastes": ["haricot", "pois"]
+      },
+      "ravageurs": ["Teigne du poireau", "Rouille", "Thrips"],
+      "conseils": [
+        "Repiquer en faisant un trou profond à la cheville, déposer le plant, arroser sans reboucher — la terre se tasse seule",
+        "Butter régulièrement pour blanchir le fût",
+        "Le poireau supporte le gel jusqu'à -15°C selon la variété",
+        "Associer avec la carotte : leurs effluves repoussent mouche de la carotte et teigne du poireau"
+      ],
+      "conservation": "Plusieurs semaines au réfrigérateur. En cave fraîche, plusieurs mois.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "oignon",
+      "nom": "Oignon",
+      "nom_latin": "Allium cepa",
+      "categorie": "Légumes bulbes",
+      "emoji": "🧅",
+      "varietes": [
+        { "nom": "Stuttgarter Riesen", "type": "ancienne", "description": "Aplati, jaune paille, excellente conservation" },
+        { "nom": "Rouge de Florence", "type": "ancienne", "description": "Allongé, rouge, doux et sucré, moins bonne conservation" },
+        { "nom": "Blanc de Lisbonne", "type": "ancienne", "description": "Blanc, doux, consommé frais ou en botte" },
+        { "nom": "Cévennes Doux", "type": "ancienne", "description": "Doux et sucré, IGP Cévennes, consommé cru" },
+        { "nom": "Jaune Paille des Vertus", "type": "ancienne", "description": "Très bonne conservation, goût prononcé" }
+      ],
+      "calendrier": {
+        "plantation_bulbilles": [3, 4],
+        "semis_exterieur": [3, 4],
+        "semis_interieur": [2],
+        "recolte": [7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré, arrêter 3 semaines avant la récolte",
+        "sol": "Léger, bien drainé, pH 6-7",
+        "espacement": "10-12 cm sur le rang, 25-30 cm entre rangs",
+        "profondeur_semis": "1-2 cm (graines), 2-3 cm (bulbilles)",
+        "germination_jours": "10-14",
+        "temps_recolte_semaines": "100-120 jours"
+      },
+      "associations": {
+        "benefiques": ["carotte", "tomate", "laitue", "camomille"],
+        "nefastes": ["pois", "haricot", "sauge"]
+      },
+      "ravageurs": ["Mouche de l'oignon", "Mildiou", "Botrytis", "Thrips"],
+      "conseils": [
+        "Les bulbilles sont plus simples et rapides que le semis pour les débutants",
+        "Planter les bulbilles pointe en l'air, à peine enterrées",
+        "Quand les fanes tombent toutes seules, la récolte est prête",
+        "Faire sécher les oignons 3-4 semaines à l'ombre avant stockage",
+        "Tresser en bottes pour une conservation de 6 à 8 mois"
+      ],
+      "conservation": "6-8 mois en tresse dans un endroit sec, frais et aéré.",
+      "empreinte_carbone": { "local": 0.15, "importe": 0.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "ail",
+      "nom": "Ail",
+      "nom_latin": "Allium sativum",
+      "categorie": "Légumes bulbes",
+      "emoji": "🧄",
+      "varietes": [
+        { "nom": "Germidour", "type": "rose", "description": "Rose du Sud-Ouest, doux, AOC Lautrec" },
+        { "nom": "Thermidrome", "type": "rose", "description": "Très bonne conservation, goût prononcé" },
+        { "nom": "Messidrome", "type": "blanc", "description": "Blanc, précoce, IGP Drôme" },
+        { "nom": "Arno", "type": "violet", "description": "Violet de Cadours, saveur intense" },
+        { "nom": "Ibéri", "type": "blanc", "description": "Demi-précoce, bonne résistance aux maladies" }
+      ],
+      "calendrier": {
+        "plantation": [10, 11, 2, 3],
+        "recolte": [6, 7]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Peu — résiste à la sécheresse, crainte l'excès d'eau",
+        "sol": "Léger, bien drainé, non calcaire",
+        "espacement": "15 cm sur le rang, 25 cm entre rangs",
+        "profondeur_plantation": "5 cm, pointe vers le haut",
+        "temps_recolte_semaines": "Plantation automne = récolte juin-juillet (8-9 mois)"
+      },
+      "associations": {
+        "benefiques": ["tomate", "fraisier", "rosier", "carotte"],
+        "nefastes": ["pois", "haricot", "chou"]
+      },
+      "ravageurs": ["Rouille de l'ail", "Pourriture blanche", "Nématodes"],
+      "conseils": [
+        "Planter en automne pour une récolte plus précoce et des bulbes plus gros",
+        "Ne jamais planter du commerce alimentaire (traité) — acheter des caïeux certifiés",
+        "Récolter quand la moitié des fanes sont sèches et couchées",
+        "Laisser sécher 3-4 semaines avant tressage ou stockage",
+        "Excellent répulsif naturel : planter autour des rosiers contre les pucerons"
+      ],
+      "conservation": "6-12 mois en tresse à l'abri de l'humidité et de la chaleur.",
+      "empreinte_carbone": { "local": 0.25, "importe": 1.2, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "poivron",
+      "nom": "Poivron",
+      "nom_latin": "Capsicum annuum",
+      "categorie": "Légumes fruits",
+      "emoji": "🫑",
+      "varietes": [
+        { "nom": "California Wonder", "type": "ancienne", "description": "Carré, charnu, passe du vert au rouge" },
+        { "nom": "Corno di Toro Rosso", "type": "ancienne", "description": "Allongé, doux, rouge, très productif" },
+        { "nom": "Lamuyo", "type": "hybride", "description": "Gros, rouge à maturité, chair épaisse" },
+        { "nom": "Topepo Rosso", "type": "ancienne", "description": "Aplati, très doux, idéal en salade" },
+        { "nom": "Yolo Wonder", "type": "ancienne", "description": "Résistant aux virus, productif" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "repiquage": [4, 5],
+        "plantation": [5, 6],
+        "recolte": [7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil, chaleur nécessaire",
+        "arrosage": "Régulier, éviter les stress hydriques",
+        "sol": "Riche, bien drainé, chaud",
+        "espacement": "40-50 cm",
+        "profondeur_semis": "0.5 cm",
+        "germination_jours": "14-21 (chaleur 25°C nécessaire)",
+        "temps_recolte_semaines": "90-120 jours après repiquage"
+      },
+      "associations": {
+        "benefiques": ["basilic", "tomate", "carotte"],
+        "nefastes": ["fenouil"]
+      },
+      "ravageurs": ["Pucerons", "Araignées rouges", "Botrytis", "Virus mosaïque"],
+      "conseils": [
+        "Besoin de chaleur : idéal sous abri ou au sud d'un mur",
+        "Semer avec fond chauffant (25°C) pour une bonne germination",
+        "En France du Nord et Centre, préférer la culture sous tunnel ou serre",
+        "Récolter en vert ou attendre le rouge (plus sucré mais plus long)"
+      ],
+      "conservation": "1 semaine à température ambiante. 2 semaines au réfrigérateur.",
+      "empreinte_carbone": { "local": 0.35, "importe": 3.2, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "aubergine",
+      "nom": "Aubergine",
+      "nom_latin": "Solanum melongena",
+      "categorie": "Légumes fruits",
+      "emoji": "🍆",
+      "varietes": [
+        { "nom": "Violette de Barbentane", "type": "ancienne", "description": "Allongée, violette, précoce, peu de graines" },
+        { "nom": "Ronde de Valence", "type": "ancienne", "description": "Ronde, violette, chair dense et ferme" },
+        { "nom": "Blanche Ronde", "type": "ancienne", "description": "Ivoire, goût plus doux et moins amer" },
+        { "nom": "Listada de Gandia", "type": "ancienne", "description": "Rayée violet et blanc, très décorative" },
+        { "nom": "Ping Tung", "type": "ancienne", "description": "Asiatique, longue et fine, très productive" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "repiquage": [4, 5],
+        "plantation": [5, 6],
+        "recolte": [7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil, très exigeante en chaleur",
+        "arrosage": "Régulier et abondant en été",
+        "sol": "Riche, chaud, bien drainé",
+        "espacement": "50-60 cm",
+        "profondeur_semis": "0.5 cm, sous chaleur 25°C",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "100-130 jours après repiquage"
+      },
+      "associations": {
+        "benefiques": ["basilic", "poivron", "haricot"],
+        "nefastes": ["fenouil", "pois"]
+      },
+      "ravageurs": ["Doryphore", "Araignées rouges", "Pucerons", "Verticilliose"],
+      "conseils": [
+        "En zones Nord et Centre, culture sous serre ou tunnel indispensable",
+        "Pincer l'extrémité pour favoriser la ramification et la production",
+        "Récolter avant que les fruits soient trop mûrs (brillance = prêt, terne = trop tard)",
+        "Tuteurer les plants chargés pour éviter la casse"
+      ],
+      "conservation": "1 semaine au réfrigérateur dans le bac à légumes.",
+      "empreinte_carbone": { "local": 0.4, "importe": 3.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "concombre",
+      "nom": "Concombre",
+      "nom_latin": "Cucumis sativus",
+      "categorie": "Cucurbitacées",
+      "emoji": "🥒",
+      "varietes": [
+        { "nom": "Marketmore", "type": "ancienne", "description": "Long, vert foncé, résistant aux maladies, plein champ" },
+        { "nom": "Cornichon de Paris", "type": "ancienne", "description": "Petit, très croquant, idéal cornichons" },
+        { "nom": "Beit Alpha", "type": "ancienne", "description": "Court, sans graines, peau fine, ne pas peler" },
+        { "nom": "Crystal Apple", "type": "ancienne", "description": "Rond et blanc-ivoire, goût doux, décoratif" },
+        { "nom": "Lemon", "type": "ancienne", "description": "Rond et jaune comme un citron, saveur douce" }
+      ],
+      "calendrier": {
+        "semis_interieur": [4],
+        "semis_exterieur": [5, 6],
+        "plantation": [5, 6],
+        "recolte": [7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil, chaleur",
+        "arrosage": "Très régulier — manque d'eau = fruits amers",
+        "sol": "Riche, frais, bien drainé",
+        "espacement": "50 cm (sol) / 30 cm (tuteuré vertical)",
+        "profondeur_semis": "2 cm, graines sur la tranche",
+        "germination_jours": "5-10",
+        "temps_recolte_semaines": "55-65 jours après semis"
+      },
+      "associations": {
+        "benefiques": ["haricot", "pois", "radis", "aneth"],
+        "nefastes": ["tomate", "sauge", "mélisse"]
+      },
+      "ravageurs": ["Oïdium", "Pucerons", "Araignées rouges", "Mildiou"],
+      "conseils": [
+        "Pincer l'extrémité à 5-6 feuilles pour favoriser la ramification",
+        "Tuteurer verticalement pour économiser la place et améliorer la ventilation",
+        "Récolter régulièrement pour maintenir la production",
+        "Couvrir d'un voile en début de saison pour accélérer la croissance"
+      ],
+      "conservation": "1 semaine au réfrigérateur. Ne se congèle pas.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "potiron",
+      "nom": "Potiron / Courge",
+      "nom_latin": "Cucurbita maxima",
+      "categorie": "Cucurbitacées",
+      "emoji": "🎃",
+      "varietes": [
+        { "nom": "Potimarron", "type": "ancienne", "description": "Petite, orange, goût de châtaigne, précoce — la plus facile" },
+        { "nom": "Jack Be Little", "type": "ancienne", "description": "Miniature décorative, comestible, parfaite en individuelle" },
+        { "nom": "Butternut", "type": "ancienne", "description": "Beige, allongée, chair orange fondante, bonne conservation" },
+        { "nom": "Spaghetti", "type": "ancienne", "description": "Chair en filaments comme des spaghettis, originale" },
+        { "nom": "Uchiki Kuri", "type": "ancienne", "description": "Japonaise, rouge-orange, 2-3 kg, chair fine" },
+        { "nom": "Delica", "type": "ancienne", "description": "Aplatie verte, chair orange, douce et farineuse" }
+      ],
+      "calendrier": {
+        "semis_interieur": [4],
+        "semis_exterieur": [5],
+        "plantation": [5, 6],
+        "recolte": [9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré à abondant, surtout en été",
+        "sol": "Très riche (compost abondant), profond",
+        "espacement": "1.5 à 2 m entre les plants",
+        "profondeur_semis": "2-3 cm",
+        "germination_jours": "7-12",
+        "temps_recolte_semaines": "90-120 jours"
+      },
+      "associations": {
+        "benefiques": ["mais", "haricot", "capucine"],
+        "nefastes": ["pomme_de_terre"]
+      },
+      "ravageurs": ["Oïdium", "Pucerons", "Limaces (jeunes plants)"],
+      "conseils": [
+        "Planter sur un tas de compost ou une butte : adore les sols très riches",
+        "Laisser mûrir jusqu'aux premières gelées légères pour optimiser la conservation",
+        "Couper avec 10 cm de queue pour éviter les pourritures",
+        "Les fleurs mâles et femelles sont sur le même pied — pollinisation par les abeilles",
+        "Un plant peut produire 3 à 8 courges selon la variété"
+      ],
+      "conservation": "3 à 6 mois dans un endroit sec, frais (15°C) et à l'abri du gel.",
+      "empreinte_carbone": { "local": 0.15, "importe": 0.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "pomme_de_terre",
+      "nom": "Pomme de terre",
+      "nom_latin": "Solanum tuberosum",
+      "categorie": "Légumes racines",
+      "emoji": "🥔",
+      "varietes": [
+        { "nom": "Amandine", "type": "ancienne", "description": "Ratte allongée, chair ferme, excellente en salade" },
+        { "nom": "Ratte du Touquet", "type": "ancienne", "description": "Petite, chair jaune, goût de noisette, très recherchée" },
+        { "nom": "Charlotte", "type": "hybride", "description": "Polyvalente, chair ferme, très répandue" },
+        { "nom": "Bintje", "type": "ancienne", "description": "Jaune, farineuse, idéale pour les frites" },
+        { "nom": "Vitelotte", "type": "ancienne", "description": "Chair violette, goût de châtaigne, très décorative" },
+        { "nom": "Roseval", "type": "hybride", "description": "Peau rouge, chair jaune ferme, excellente tenue à la cuisson" }
+      ],
+      "calendrier": {
+        "germination_tubercules": [2, 3],
+        "plantation": [3, 4, 5],
+        "recolte_primeurs": [6, 7],
+        "recolte_conservation": [8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Régulier, surtout à la formation des tubercules",
+        "sol": "Profond, léger, légèrement acide (pH 5.5-6.5)",
+        "espacement": "30-35 cm sur le rang, 70-80 cm entre rangs",
+        "profondeur_plantation": "10-15 cm",
+        "temps_recolte_semaines": "70-120 jours selon variété (primeur vs conservation)"
+      },
+      "associations": {
+        "benefiques": ["haricot", "chou", "radis", "tagetes"],
+        "nefastes": ["tomate", "concombre", "tournesol"]
+      },
+      "ravageurs": ["Doryphore", "Mildiou", "Rhizoctone", "Taupins"],
+      "conseils": [
+        "Faire germer les tubercules à la lumière 3-4 semaines avant plantation (germes courts et verts)",
+        "Butter 2-3 fois au cours de la saison pour augmenter le rendement",
+        "Surveiller le doryphore et écraser les pontes orangées sous les feuilles",
+        "Ne pas planter au même endroit 3 ans de suite (rotation obligatoire)",
+        "Récolter par temps sec, laisser sécher quelques heures avant stockage"
+      ],
+      "conservation": "Plusieurs mois en cave dans le noir, entre 4 et 8°C.",
+      "empreinte_carbone": { "local": 0.1, "importe": 0.7, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "epinard",
+      "nom": "Épinard",
+      "nom_latin": "Spinacia oleracea",
+      "categorie": "Légumes feuilles",
+      "emoji": "🥬",
+      "varietes": [
+        { "nom": "Géant d'Hiver", "type": "ancienne", "description": "Résistant au froid, grandes feuilles, hiver-printemps" },
+        { "nom": "Monstrueux de Viroflay", "type": "ancienne", "description": "Très grandes feuilles, productif, printemps-automne" },
+        { "nom": "Verdil", "type": "hybride", "description": "Résistant à la montée en graines, printemps" },
+        { "nom": "Bloomsdale", "type": "ancienne", "description": "Feuilles bullées, savoureux, résistant" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [3, 4, 8, 9, 10],
+        "recolte": [4, 5, 6, 10, 11, 12, 1, 2]
+      },
+      "culture": {
+        "exposition": "Mi-ombre à soleil, mi-ombre en été obligatoire",
+        "arrosage": "Régulier, n'aime pas la sécheresse",
+        "sol": "Riche, frais, pH 6.5-7",
+        "espacement": "15-20 cm",
+        "profondeur_semis": "2-3 cm",
+        "germination_jours": "7-14",
+        "temps_recolte_semaines": "40-60 jours"
+      },
+      "associations": {
+        "benefiques": ["fraisier", "radis", "laitue"],
+        "nefastes": ["betterave (même famille, maladies communes)"]
+      },
+      "ravageurs": ["Mildiou", "Pucerons", "Mineuse des feuilles"],
+      "conseils": [
+        "Culture de printemps et d'automne-hiver uniquement — monte en graines dès les chaleurs",
+        "Semer en automne pour une récolte d'hiver sous voile de forçage",
+        "Couper feuille par feuille en laissant le cœur — repousse plusieurs semaines",
+        "Très riche en fer, magnésium et vitamines"
+      ],
+      "conservation": "2-3 jours au réfrigérateur. Excellent en congélation après blanchiment.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "radis",
+      "nom": "Radis",
+      "nom_latin": "Raphanus sativus",
+      "categorie": "Légumes racines",
+      "emoji": "🔴",
+      "varietes": [
+        { "nom": "Flamboyant", "type": "ancienne", "description": "Rouge à pointe blanche, croquant, 18 jours seulement" },
+        { "nom": "Gaudry", "type": "ancienne", "description": "Long et rose, doux et craquant" },
+        { "nom": "French Breakfast", "type": "ancienne", "description": "Allongé, rouge et blanc, très doux" },
+        { "nom": "Noir Long d'Hiver", "type": "ancienne", "description": "Noir, gros, piquant, se conserve l'hiver" },
+        { "nom": "Daïkon", "type": "ancienne", "description": "Géant blanc japonais, doux, cru ou cuit" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [3, 4, 5, 8, 9],
+        "recolte": [4, 5, 6, 9, 10]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre légère",
+        "arrosage": "Régulier pour éviter le goût piquant et la montée en graines",
+        "sol": "Léger, bien drainé",
+        "espacement": "5 cm sur le rang, 15 cm entre rangs",
+        "profondeur_semis": "1 cm",
+        "germination_jours": "3-5",
+        "temps_recolte_semaines": "18-25 jours (printemps), 45-60 jours (hiver)"
+      },
+      "associations": {
+        "benefiques": ["carotte", "laitue", "tomate — repousse les altises"],
+        "nefastes": ["chou (même famille)"]
+      },
+      "ravageurs": ["Altises", "Mouche du chou", "Pucerons"],
+      "conseils": [
+        "Le radis est parfait pour les débutants et les enfants — résultats rapides !",
+        "Ne pas semer en été (montée en graines) ni en pleine chaleur",
+        "Idéal pour intercaler entre des plants à croissance lente (carottes, poireaux)",
+        "Récolter dès que la racine atteint 2 cm — trop longtemps = creux et piquant"
+      ],
+      "conservation": "1 semaine au réfrigérateur. Couper les fanes pour conserver plus longtemps.",
+      "empreinte_carbone": { "local": 0.1, "importe": 0.6, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "betterave",
+      "nom": "Betterave",
+      "nom_latin": "Beta vulgaris",
+      "categorie": "Légumes racines",
+      "emoji": "🟣",
+      "varietes": [
+        { "nom": "Crapaudine", "type": "ancienne", "description": "Noire à l'extérieur, rouge à l'intérieur, saveur subtile" },
+        { "nom": "Chioggia", "type": "ancienne", "description": "Rose et blanche en alternance, douce, jolie en salade" },
+        { "nom": "Bulls Blood", "type": "ancienne", "description": "Feuillage rouge décoratif, racine également rouge-foncé" },
+        { "nom": "Detroit Dark Red", "type": "ancienne", "description": "Classique, ronde, rouge, très productive" },
+        { "nom": "Golden", "type": "ancienne", "description": "Jaune dorée, plus douce, ne tache pas" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [4, 5, 6, 7],
+        "recolte": [7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Modéré et régulier",
+        "sol": "Profond, meuble, pH 6.5-7",
+        "espacement": "10-15 cm après éclaircissage",
+        "profondeur_semis": "2-3 cm",
+        "germination_jours": "10-15",
+        "temps_recolte_semaines": "60-90 jours"
+      },
+      "associations": {
+        "benefiques": ["oignon", "laitue", "chou"],
+        "nefastes": ["haricot", "épinard (même famille)"]
+      },
+      "ravageurs": ["Pucerons noirs", "Cercospora (taches foliaires)", "Limaces"],
+      "conseils": [
+        "Chaque 'graine' est en réalité un fruit contenant 2-4 graines — éclaircir obligatoire",
+        "Tremper les graines 12h dans l'eau tiède avant semis pour accélérer la germination",
+        "Les jeunes feuilles sont comestibles en salade",
+        "Peut rester en terre jusqu'aux fortes gelées"
+      ],
+      "conservation": "Plusieurs semaines au réfrigérateur. En cave dans du sable, plusieurs mois.",
+      "empreinte_carbone": { "local": 0.12, "importe": 0.7, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "chou",
+      "nom": "Chou",
+      "nom_latin": "Brassica oleracea",
+      "categorie": "Légumes feuilles",
+      "emoji": "🥦",
+      "varietes": [
+        { "nom": "Chou de Milan Pontoise", "type": "ancienne", "description": "Frisé, doux, résistant au gel, hiver" },
+        { "nom": "Chou Rouge d'Hiver", "type": "ancienne", "description": "Dense, rouge-violet, excellent cru et cuit" },
+        { "nom": "Chou Vert Brunswick", "type": "ancienne", "description": "Vert pommé, classique, savoureux" },
+        { "nom": "Romanesco", "type": "ancienne", "description": "Fractale verte spectaculaire, goût entre brocoli et chou-fleur" },
+        { "nom": "Chou Fleur de Bretagne", "type": "ancienne", "description": "Blanc, très répandu, culture longue" },
+        { "nom": "Brocoli Calabrais", "type": "ancienne", "description": "Productif, repousse après coupe principale" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4, 5, 6],
+        "repiquage": [5, 6, 7],
+        "recolte": [9, 10, 11, 12, 1, 2, 3]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Régulier et abondant",
+        "sol": "Riche, profond, pH 6.5-7.5",
+        "espacement": "50-80 cm selon variété",
+        "profondeur_semis": "1 cm",
+        "germination_jours": "5-10",
+        "temps_recolte_semaines": "80-150 jours selon variété"
+      },
+      "associations": {
+        "benefiques": ["celeri", "aneth", "tagetes", "sauge"],
+        "nefastes": ["tomate", "fraisier", "moutarde"]
+      },
+      "ravageurs": ["Piéride du chou", "Pucerons cendrés", "Mouche du chou", "Altises"],
+      "conseils": [
+        "Protéger systématiquement avec un voile anti-insectes contre la piéride et la mouche du chou",
+        "Arroser copieusement après repiquage et les premières semaines",
+        "Rotation indispensable : ne pas replanter sur une parcelle ayant eu des brassicas les 3 ans précédents",
+        "Le brocoli regénère de petites têtes latérales après la coupe principale"
+      ],
+      "conservation": "2-3 semaines au réfrigérateur. En cave, plusieurs semaines.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.3, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "poivron_doux",
+      "nom": "Piment doux / Paprika",
+      "nom_latin": "Capsicum annuum var. grossum",
+      "categorie": "Légumes fruits",
+      "emoji": "🌶️",
+      "varietes": [
+        { "nom": "Doux d'Espagne", "type": "ancienne", "description": "Long et rouge, très doux, séché pour le paprika" },
+        { "nom": "Jimmy Nardello", "type": "ancienne", "description": "Allongé, rouge vif, exceptionnel en padron ou sauté" },
+        { "nom": "Piquillo", "type": "ancienne", "description": "Triangulaire, doux, traditionnel espagnol, excellent grillé" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "plantation": [5, 6],
+        "recolte": [7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil, chaleur",
+        "arrosage": "Régulier",
+        "sol": "Riche, drainé",
+        "espacement": "40 cm",
+        "germination_jours": "14-21 (chaleur 25°C)",
+        "temps_recolte_semaines": "90-110 jours"
+      },
+      "associations": {
+        "benefiques": ["basilic", "tomate"],
+        "nefastes": ["fenouil"]
+      },
+      "ravageurs": ["Pucerons", "Araignées rouges"],
+      "conseils": [
+        "Mêmes exigences que le poivron — culture sous abri recommandée en Nord/Centre",
+        "Très décoratif en pot sur une terrasse exposée au sud"
+      ],
+      "conservation": "1 semaine à température ambiante.",
+      "empreinte_carbone": { "local": 0.35, "importe": 3.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "fraisier",
+      "nom": "Fraisier",
+      "nom_latin": "Fragaria × ananassa",
+      "categorie": "Fruits rouges",
+      "emoji": "🍓",
+      "varietes": [
+        { "nom": "Gariguette", "type": "ancienne", "description": "Allongée, rouge vif, parfumée, précoce — la reine des fraises françaises" },
+        { "nom": "Mara des Bois", "type": "remontante", "description": "Goût de fraise des bois, produit de juin à octobre" },
+        { "nom": "Ciflorette", "type": "ancienne", "description": "Croquante, sucrée, bonne conservation" },
+        { "nom": "Charlotte", "type": "remontante", "description": "Très parfumée, production continue" },
+        { "nom": "Fraise des Bois", "type": "ancienne", "description": "Petite, sauvage, goût intense, en bordure de massif" }
+      ],
+      "calendrier": {
+        "plantation": [3, 4, 8, 9],
+        "recolte": [5, 6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre légère",
+        "arrosage": "Régulier, éviter de mouiller les fruits",
+        "sol": "Riche, frais, légèrement acide (pH 5.5-6.5)",
+        "espacement": "25-30 cm sur le rang, 40 cm entre rangs",
+        "profondeur_plantation": "Collet au niveau du sol, ni enterré ni surélevé",
+        "temps_recolte_semaines": "Récolte dès la 1ère année pour les remontantes"
+      },
+      "associations": {
+        "benefiques": ["ail", "bourrache", "épinard", "laitue"],
+        "nefastes": ["chou", "fenouil", "kohlrabi"]
+      },
+      "ravageurs": ["Botrytis (pourriture grise)", "Pucerons", "Limaces", "Acariens", "Otiorhynques"],
+      "conseils": [
+        "Pailler pour tenir les fruits propres, conserver l'humidité et éviter le botrytis",
+        "Couper les stolons sauf si on veut multiplier les plants",
+        "Renouveler les plants tous les 3-4 ans pour maintenir la production",
+        "Planter en août-septembre pour une récolte dès le printemps suivant",
+        "En pot ou gouttière : très adapté aux petits espaces et balcons"
+      ],
+      "conservation": "1-2 jours à température ambiante. 3 jours au réfrigérateur sans laver.",
+      "empreinte_carbone": { "local": 0.5, "importe": 5.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "basilic",
+      "nom": "Basilic",
+      "nom_latin": "Ocimum basilicum",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Grand Vert (Genovese)", "type": "classique", "description": "Le classique, grandes feuilles, indispensable pour le pesto" },
+        { "nom": "Pourpre", "type": "decoratif", "description": "Feuilles violettes, décoratif, goût légèrement anisé" },
+        { "nom": "Citron", "type": "aromatique", "description": "Notes citronnées, excellent avec poissons et desserts" },
+        { "nom": "Thaï", "type": "aromatique", "description": "Notes anisées-réglissées, pour la cuisine asiatique" },
+        { "nom": "Nain Grec", "type": "compact", "description": "Petites feuilles, port compact, idéal en pot" },
+        { "nom": "Cannelle", "type": "aromatique", "description": "Notes cannelle et clou de girofle, original" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [5, 6],
+        "recolte": [6, 7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil, chaleur",
+        "arrosage": "Régulier mais pas excessif, arroser au pied",
+        "sol": "Léger, bien drainé, riche",
+        "espacement": "20-30 cm",
+        "profondeur_semis": "0.5 cm",
+        "germination_jours": "7-14 (chaleur 20°C minimum)",
+        "temps_recolte_semaines": "8-10 semaines après semis"
+      },
+      "associations": {
+        "benefiques": ["tomate", "poivron", "aubergine"],
+        "nefastes": ["sauge", "thym (compétition aromatique)"]
+      },
+      "ravageurs": ["Pucerons", "Botrytis", "Limaces (semis)"],
+      "conseils": [
+        "Pincer régulièrement les fleurs pour prolonger la production de feuilles",
+        "Ne jamais mettre au réfrigérateur — le froid noircit les feuilles",
+        "Arroser le matin, jamais le soir pour éviter les maladies fongiques",
+        "Le basilic aime la chaleur : ne planter dehors qu'après les Saints de Glace",
+        "Faire des boutures dans l'eau pour multiplier facilement"
+      ],
+      "conservation": "À température ambiante dans un verre d'eau. Se congèle en glaçons avec de l'huile d'olive.",
+      "empreinte_carbone": { "local": 0.5, "importe": 4.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "persil",
+      "nom": "Persil",
+      "nom_latin": "Petroselinum crispum",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Plat Commun", "type": "plat", "description": "Goût plus intense, préféré des cuisiniers professionnels" },
+        { "nom": "Frisé Paramount", "type": "frise", "description": "Frisé, décoratif, très résistant" },
+        { "nom": "Géant d'Italie", "type": "plat", "description": "Très grandes feuilles plates, arôme puissant" },
+        { "nom": "Hamburg", "type": "racine", "description": "Cultivé pour sa racine (comme le panais), saveur unique" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [3, 4, 5, 7, 8],
+        "recolte": [5, 6, 7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Régulier, aime les sols frais",
+        "sol": "Riche, humide, bien travaillé",
+        "espacement": "20 cm",
+        "profondeur_semis": "1 cm",
+        "germination_jours": "21-28 (lente — tremper 24h dans l'eau tiède)",
+        "temps_recolte_semaines": "10-12 semaines"
+      },
+      "associations": {
+        "benefiques": ["tomate", "asperge", "carotte"],
+        "nefastes": ["laitue (allélopathie légère)"]
+      },
+      "ravageurs": ["Mouche du persil", "Carotte (même ravageur)", "Rouille"],
+      "conseils": [
+        "Tremper les graines 24h avant semis : la germination est naturellement lente",
+        "Bisannuel : sème en année 1, monte en graines en année 2",
+        "Couper régulièrement pour stimuler la production",
+        "Résiste bien au froid, possible jusqu'en novembre sans protection"
+      ],
+      "conservation": "1 semaine au réfrigérateur dans un torchon humide. Très bien en congélation ciselé.",
+      "empreinte_carbone": { "local": 0.4, "importe": 3.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "ciboulette",
+      "nom": "Ciboulette",
+      "nom_latin": "Allium schoenoprasum",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Commune", "type": "classique", "description": "La plus répandue, saveur douce d'oignon" },
+        { "nom": "Ciboulette Chinoise", "type": "asiatique", "description": "Feuilles plus larges et plates, saveur ail" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [3, 4, 5],
+        "plantation": [3, 4, 9, 10],
+        "recolte": [4, 5, 6, 7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Modéré et régulier",
+        "sol": "Tout type, préfère un sol frais",
+        "espacement": "20-25 cm (touffes)",
+        "germination_jours": "10-14",
+        "temps_recolte_semaines": "8-10 semaines après semis"
+      },
+      "associations": {
+        "benefiques": ["carotte", "tomate", "rosier"],
+        "nefastes": ["pois", "haricot"]
+      },
+      "ravageurs": ["Rouille", "Pucerons (rare)"],
+      "conseils": [
+        "Plante vivace facile — une fois installée, revient chaque année",
+        "Couper à 5 cm du sol : repousse en quelques jours",
+        "Les fleurs mauves sont comestibles et très décoratives",
+        "Division des touffes tous les 3 ans pour les revigorer",
+        "Très bien en pot sur le rebord de fenêtre"
+      ],
+      "conservation": "Ciseler et congeler en glaçons. Sèche bien aussi.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "thym",
+      "nom": "Thym",
+      "nom_latin": "Thymus vulgaris",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Thym Commun", "type": "classique", "description": "Incontournable du bouquet garni, très résistant" },
+        { "nom": "Thym Citron", "type": "aromatique", "description": "Notes citronnées marquées, délicat" },
+        { "nom": "Thym Serpolet", "type": "sauvage", "description": "Rampant, pour couvre-sol, fleurit abondamment" },
+        { "nom": "Thym Carvi", "type": "aromatique", "description": "Notes de carvi, moins classique" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3, 4],
+        "plantation": [4, 5, 9],
+        "recolte": [4, 5, 6, 7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Plein soleil, sec",
+        "arrosage": "Très peu — xérophile, craint l'excès d'eau",
+        "sol": "Pauvre, calcaire, très drainé",
+        "espacement": "30-40 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "Plante vivace — récolte dès la 1ère année"
+      },
+      "associations": {
+        "benefiques": ["chou", "tomate", "aubergine — repousse les insectes"],
+        "nefastes": ["basilic (conditions opposées)"]
+      },
+      "ravageurs": ["Très résistant. Possible cochenilles en pot."],
+      "conseils": [
+        "Plante vivace et vivace méditerranéenne — très rustique jusqu'à -15°C",
+        "Tailler après floraison pour maintenir un port compact",
+        "Récolter juste avant la floraison pour un arôme maximum",
+        "Idéal en rocaille, entre des dalles ou en bac avec la lavande et le romarin",
+        "Excellent répulsif naturel contre de nombreux insectes ravageurs"
+      ],
+      "conservation": "Se sèche parfaitement. Suspendre en bouquets dans un endroit aéré.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "romarin",
+      "nom": "Romarin",
+      "nom_latin": "Salvia rosmarinus",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Officinal", "type": "classique", "description": "Le classique dressé, puissant, pour viandes et grillades" },
+        { "nom": "Rampant", "type": "couvre-sol", "description": "Retombant, idéal en bordure de talus ou de mur" },
+        { "nom": "Majorca Pink", "type": "fleuri", "description": "Fleurs roses plutôt que bleues, décoratif" }
+      ],
+      "calendrier": {
+        "plantation": [4, 5, 9],
+        "recolte": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Très peu — xérophile",
+        "sol": "Pauvre, calcaire, très drainé",
+        "espacement": "60-80 cm",
+        "germination_jours": "21-30",
+        "temps_recolte_semaines": "Arbrisseau vivace, récolte toute l'année"
+      },
+      "associations": {
+        "benefiques": ["chou", "haricot", "carotte — répulsif général"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Pratiquement aucun — plante très résistante"],
+      "conseils": [
+        "Résiste jusqu'à -12°C selon les variétés — rentrer en pot dans les régions très froides",
+        "Bouturer à la fin de l'été pour multiplier gratuitement",
+        "Tailler légèrement après floraison — ne jamais couper dans le vieux bois",
+        "Récolte toute l'année — idéal pour les grillades d'hiver",
+        "Très mellifère : attire abeilles et bourdons"
+      ],
+      "conservation": "Frais plusieurs semaines. Séchage facile et parfait.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "menthe",
+      "nom": "Menthe",
+      "nom_latin": "Mentha spp.",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Poivrée", "type": "classique", "description": "La plus utilisée, fraîche et mentholée, thé à la menthe" },
+        { "nom": "Verte", "type": "culinaire", "description": "Plus douce, idéale en cuisine (taboulé, mojito)" },
+        { "nom": "Marocaine", "type": "culinaire", "description": "Très parfumée, la vraie menthe du thé marocain" },
+        { "nom": "Chocolat", "type": "originale", "description": "Notes de chocolat-menthe, surprenante en dessert" },
+        { "nom": "Ananas", "type": "originale", "description": "Notes fruitées d'ananas, pour cocktails et infusions" },
+        { "nom": "Aquatique", "type": "naturelle", "description": "Pousse en bord de ruisseau, puissante" }
+      ],
+      "calendrier": {
+        "plantation": [4, 5, 9, 10],
+        "recolte": [5, 6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Mi-ombre à soleil",
+        "arrosage": "Régulier et abondant, aime l'humidité",
+        "sol": "Riche, frais voire humide",
+        "espacement": "30 cm (mais envahissante !)",
+        "temps_recolte_semaines": "Plante vivace, récolte dès installation"
+      },
+      "associations": {
+        "benefiques": ["tomate, chou — répulsif pucerons et piéride"],
+        "nefastes": ["tout le reste si non contenue — TRÈS envahissante"
+        ]
+      },
+      "ravageurs": ["Rouille", "Pucerons (rare)"],
+      "conseils": [
+        "⚠️ TOUJOURS planter en pot enterré ou avec une barrière racinaire — envahit tout le jardin",
+        "Plante vivace, revient fidèlement chaque printemps",
+        "Couper à 10 cm avant floraison pour maintenir la production et l'arôme",
+        "Très facile à bouturer : 1 tige dans un verre d'eau pendant 2 semaines"
+      ],
+      "conservation": "Dans un verre d'eau, 1 semaine. Congèle bien ou infusion séchée.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "coriandre",
+      "nom": "Coriandre",
+      "nom_latin": "Coriandrum sativum",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Commune", "type": "classique", "description": "Standard, feuilles et graines utilisables" },
+        { "nom": "Calypso", "type": "feuilles", "description": "Résistante à la montée en graines, production longue" },
+        { "nom": "Cruiser", "type": "compact", "description": "Port compact, bonne production de feuilles" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [4, 5, 6, 7, 8],
+        "recolte": [6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre légère (ombre pour retarder la montée en graines)",
+        "arrosage": "Modéré et régulier",
+        "sol": "Léger, bien drainé",
+        "espacement": "10-15 cm",
+        "profondeur_semis": "1 cm",
+        "germination_jours": "10-21",
+        "temps_recolte_semaines": "30-40 jours"
+      },
+      "associations": {
+        "benefiques": ["tomate", "épinard", "carotte"],
+        "nefastes": ["fenouil"]
+      },
+      "ravageurs": ["Pucerons", "Montée en graines rapide par chaleur"],
+      "conseils": [
+        "Semer échelonné toutes les 3 semaines pour une production continue",
+        "L'ombre partielle ralentit la montée en graines",
+        "Écraser légèrement les graines (fruit double) avant semis pour améliorer la germination",
+        "Les graines séchées sont une épice à part entière — laisser monter en graines exprès !"
+      ],
+      "conservation": "2-3 jours au réfrigérateur. Se congèle ciselé.",
+      "empreinte_carbone": { "local": 0.4, "importe": 3.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "aneth",
+      "nom": "Aneth",
+      "nom_latin": "Anethum graveolens",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Mammut", "type": "grand", "description": "Très grand (1.5m), abondant, pour graines et feuilles" },
+        { "nom": "Fernleaf", "type": "compact", "description": "Compact, résiste à la montée en graines, pot et rebord" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [4, 5, 6],
+        "recolte": [6, 7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré",
+        "sol": "Drainé, peu riche",
+        "espacement": "20-30 cm",
+        "profondeur_semis": "0.5 cm",
+        "germination_jours": "7-14",
+        "temps_recolte_semaines": "40-60 jours"
+      },
+      "associations": {
+        "benefiques": ["concombre", "chou", "laitue"],
+        "nefastes": ["carotte", "tomate", "fenouil (hybridation croisée)"]
+      },
+      "ravageurs": ["Pucerons", "Chenilles (Papilio machaon)"],
+      "conseils": [
+        "Semer en place, supporte mal la transplantation (pivot)",
+        "Montre en graines rapidement en été — préférer les semis de printemps",
+        "Les larves du Machaon mangent les feuilles : laisser faire si possible, la chenille est magnifique !"
+      ],
+      "conservation": "Quelques jours au réfrigérateur. Se sèche bien.",
+      "empreinte_carbone": { "local": 0.4, "importe": 2.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "estragon",
+      "nom": "Estragon",
+      "nom_latin": "Artemisia dracunculus",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Français", "type": "culinaire", "description": "LE vrai estragon, goût anisé subtil, stérile (boutures uniquement)" },
+        { "nom": "Russe", "type": "courant", "description": "Se sème, mais goût très inférieur, presque insipide" }
+      ],
+      "calendrier": {
+        "plantation": [4, 5],
+        "recolte": [5, 6, 7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Soleil",
+        "arrosage": "Modéré, craint l'excès",
+        "sol": "Léger, drainé",
+        "espacement": "40-50 cm",
+        "temps_recolte_semaines": "Plante vivace, récolte dès la 1ère année"
+      },
+      "associations": {
+        "benefiques": ["légumes en général — répulsif léger"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Très résistant"],
+      "conseils": [
+        "Toujours acheter du français, jamais du russe (goût décevant)",
+        "L'estragon français ne se reproduit que par boutures ou divisions — graines stériles",
+        "Couper avant floraison pour concentrer les arômes dans les feuilles",
+        "Rentrer en pot dans les régions très froides (survit à -10°C)",
+        "Indispensable pour la sauce béarnaise et le poulet à l'estragon"
+      ],
+      "conservation": "1 semaine au réfrigérateur. Infuser dans du vinaigre blanc pour conservation longue durée.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "sage",
+      "nom": "Sauge officinale",
+      "nom_latin": "Salvia officinalis",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Officinale", "type": "culinaire", "description": "Grise-verte classique, pour cuisiner et tisanes" },
+        { "nom": "Pourpre", "type": "decoratif", "description": "Feuilles violettes, comestible, très ornementale" },
+        { "nom": "Tricolore", "type": "decoratif", "description": "Vert-blanc-violet, décorative et aromatique" },
+        { "nom": "Ananas", "type": "originale", "description": "Notes ananas-fruits rouges, non rustique" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "plantation": [4, 5, 9],
+        "recolte": [4, 5, 6, 7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Peu — xérophile méditerranéenne",
+        "sol": "Pauvre, drainé, calcaire",
+        "espacement": "40-50 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "Vivace, récolte dès la 1ère année"
+      },
+      "associations": {
+        "benefiques": ["chou, carotte — répulsif mouche"],
+        "nefastes": ["oignon", "concombre", "basilic"]
+      },
+      "ravageurs": ["Feuilles blanches (oïdium)", "Frostbite (gel printanier)"],
+      "conseils": [
+        "Rustique jusqu'à -15°C pour l'officinale",
+        "Tailler après floraison pour un port compact et une longue durée de vie",
+        "Puissant répulsif contre la mouche du chou et de la carotte",
+        "En infusion : propriétés antiseptiques reconnues (gorge, digestion)"
+      ],
+      "conservation": "Se sèche parfaitement en bouquet à l'ombre.",
+      "empreinte_carbone": { "local": 0.25, "importe": 1.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "lavande",
+      "nom": "Lavande",
+      "nom_latin": "Lavandula angustifolia",
+      "categorie": "Herbes aromatiques",
+      "emoji": "💜",
+      "varietes": [
+        { "nom": "Vraie (angustifolia)", "type": "officinale", "description": "La vraie lavande, altitude, très parfumée" },
+        { "nom": "Lavandin Grosso", "type": "hybride", "description": "Hybride productif, fleurs longues, pour sachets" },
+        { "nom": "Hidcote", "type": "compact", "description": "Compact, intense, idéal en bordure" },
+        { "nom": "Papillon", "type": "papillon", "description": "Grandes fleurs ailées, très décorative" }
+      ],
+      "calendrier": {
+        "plantation": [4, 5, 9, 10],
+        "recolte_fleurs": [6, 7, 8]
+      },
+      "culture": {
+        "exposition": "Plein soleil, sec",
+        "arrosage": "Très peu — xérophile",
+        "sol": "Pauvre, calcaire, bien drainé",
+        "espacement": "40-60 cm",
+        "temps_recolte_semaines": "Vivace, fleurit chaque été"
+      },
+      "associations": {
+        "benefiques": ["rosier", "tomate — répulsif et mellifère"],
+        "nefastes": ["plantes à sol riche et humide"]
+      },
+      "ravageurs": ["Très résistante. Cicadelle des lavandes dans le Sud."],
+      "conseils": [
+        "Tailler au 1/3 après floraison — ne jamais couper dans le vieux bois",
+        "Extrêmement mellifère — attire et nourrit les pollinisateurs",
+        "Fleurs comestibles en cuisine (glaces, biscuits, sirops)",
+        "Sachet dans les placards pour éloigner les mites",
+        "Rustique selon variété : l'angustifolia supporte -20°C"
+      ],
+      "conservation": "Sécher les tiges en bouquet à l'ombre pour utilisation toute l'année.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "citronnelle",
+      "nom": "Citronnelle (Mélisse)",
+      "nom_latin": "Melissa officinalis",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Commune", "type": "classique", "description": "Feuilles vert clair, citron doux, digestive" },
+        { "nom": "Aurea", "type": "decoratif", "description": "Feuilles panachées jaune-vert, moins vigoureuse" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [4, 5, 9],
+        "recolte": [5, 6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Mi-ombre à soleil",
+        "arrosage": "Régulier, aime la fraîcheur",
+        "sol": "Riche, frais",
+        "espacement": "40-50 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "Vivace envahissante"
+      },
+      "associations": {
+        "benefiques": ["tomate — attire les abeilles"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Très résistante"],
+      "conseils": [
+        "Vivace robuste — peut devenir envahissante, contenir en pot",
+        "Très mellifère : attire les abeilles en grand nombre",
+        "Couper avant floraison pour concentrer les huiles essentielles citronnées",
+        "Infusion digestive et calmante bien connue",
+        "Frotter les feuilles pour libérer l'arôme citronné"
+      ],
+      "conservation": "Séchage facile. En infusion ou sirop.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "cerfeuil",
+      "nom": "Cerfeuil",
+      "nom_latin": "Anthriscus cerefolium",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Commun", "type": "classique", "description": "Fin et délicat, notes anisées légères" },
+        { "nom": "Frisé", "type": "decoratif", "description": "Feuilles très découpées, légèrement moins aromatique" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [3, 4, 8, 9],
+        "recolte": [4, 5, 6, 10, 11]
+      },
+      "culture": {
+        "exposition": "Mi-ombre — fuit le soleil direct",
+        "arrosage": "Régulier, aime la fraîcheur",
+        "sol": "Frais, humifère",
+        "espacement": "15-20 cm",
+        "profondeur_semis": "0.5 cm",
+        "germination_jours": "10-14",
+        "temps_recolte_semaines": "35-45 jours"
+      },
+      "associations": {
+        "benefiques": ["laitue", "radis", "carotte"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Limaces", "Pucerons"],
+      "conseils": [
+        "L'arôme s'évanouit à la cuisson — toujours ajouter cru au dernier moment",
+        "Fines herbes classiques avec persil, ciboulette et estragon",
+        "Semer à l'automne pour récolte hivernale sous cloche",
+        "Ne jamais laisser monter en graines si on veut les feuilles"
+      ],
+      "conservation": "2-3 jours au réfrigérateur. Ne se congèle pas bien.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "bourrache",
+      "nom": "Bourrache",
+      "nom_latin": "Borago officinalis",
+      "categorie": "Herbes aromatiques",
+      "emoji": "💙",
+      "varietes": [
+        { "nom": "Bleue", "type": "classique", "description": "Fleurs étoilées bleues, goût de concombre" },
+        { "nom": "Alba", "type": "blanche", "description": "Fleurs blanches, plus rare" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [4, 5, 6],
+        "recolte": [6, 7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Peu — résistant à la sécheresse",
+        "sol": "Tout type, même pauvre",
+        "espacement": "30-40 cm",
+        "profondeur_semis": "1 cm",
+        "germination_jours": "7-14",
+        "temps_recolte_semaines": "55-70 jours"
+      },
+      "associations": {
+        "benefiques": ["tomate, concombre, fraisier — attraction pollinisateurs"],
+        "nefastes": ["aucune connue"
+        ]
+      },
+      "ravageurs": ["Pucerons noirs (surveiller)"],
+      "conseils": [
+        "Se ressème spontanément chaque année — plante annuelle auto-fertile",
+        "Fleurs entièrement comestibles — décorer salades, cocktails, glaçons",
+        "Attire massivement les abeilles : excellent pour la pollinisation",
+        "Feuilles comestibles en salade jeunes (goût de concombre)"
+      ],
+      "conservation": "Fleurs fraîches quelques heures. Cristalliser au sucre pour décoration.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "capucine",
+      "nom": "Capucine",
+      "nom_latin": "Tropaeolum majus",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌸",
+      "varietes": [
+        { "nom": "Naine Jewel", "type": "compact", "description": "Compact, toutes couleurs, en pot ou bordure" },
+        { "nom": "Grimpante", "type": "grimpante", "description": "Grimpe à 2-3m, colonise les treillages" },
+        { "nom": "Alaska", "type": "panachee", "description": "Feuilles panachées crème et vert, très décorative" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [4, 5],
+        "recolte_fleurs": [6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Modéré — pousse mieux dans un sol pauvre !",
+        "sol": "Pauvre et sec — trop riche = trop de feuilles, peu de fleurs",
+        "espacement": "25-30 cm",
+        "profondeur_semis": "2 cm",
+        "germination_jours": "7-12",
+        "temps_recolte_semaines": "50-60 jours"
+      },
+      "associations": {
+        "benefiques": ["courgette, concombre, chou — piège à pucerons"],
+        "nefastes": ["aucune connue"
+        ]
+      },
+      "ravageurs": ["Pucerons noirs (plant sacrificiel — c'est le but !)"],
+      "conseils": [
+        "Plante entièrement comestible : fleurs, feuilles et graines",
+        "Attire les pucerons loin des légumes — planter en bordure de potager exprès",
+        "Fleurs au goût légèrement poivré — décorer salades et apéros",
+        "Graines vertes marinées dans du vinaigre = faux câpres",
+        "Très facile et rapide, idéale pour les enfants"
+      ],
+      "conservation": "Fleurs fraîches à consommer immédiatement.",
+      "empreinte_carbone": { "local": 0.1, "importe": 1.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "tagetes",
+      "nom": "Tagètes (Œillet d'Inde)",
+      "nom_latin": "Tagetes patula / erecta",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌼",
+      "varietes": [
+        { "nom": "Patula (Nain)", "type": "compact", "description": "10-30cm, très fleuri, anti-nématodes efficace" },
+        { "nom": "Erecta (Grand)", "type": "grand", "description": "50-100cm, grandes fleurs oranges" },
+        { "nom": "Tenuifolia", "type": "fin", "description": "Feuillage fin aromatique, petites fleurs, comestible" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [5, 6],
+        "recolte_fleurs": [6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré",
+        "sol": "Tout type",
+        "espacement": "20-30 cm",
+        "germination_jours": "5-8",
+        "temps_recolte_semaines": "Floraison continue jusqu'aux gelées"
+      },
+      "associations": {
+        "benefiques": ["tomate, poivron, courgette — anti-nématodes et répulsif général"],
+        "nefastes": ["aucune connue"
+        ]
+      },
+      "ravageurs": ["Très résistant"],
+      "conseils": [
+        "Plante compagne indispensable au potager : repousse nématodes, pucerons et autres ravageurs",
+        "Planter en bordure de toutes les planches de légumes",
+        "Fleurs comestibles — pétales orangés en salade ou omelette",
+        "Déadheading (couper les fleurs fanées) prolonge la floraison jusqu'à l'automne",
+        "Les racines sécrètent des substances allélopathiques anti-nématodes dans le sol"
+      ],
+      "conservation": "Fleurs fraîches. Sécher les pétales pour colorant alimentaire naturel.",
+      "empreinte_carbone": { "local": 0.1, "importe": 0.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "asperge",
+      "nom": "Asperge",
+      "nom_latin": "Asparagus officinalis",
+      "categorie": "Légumes tiges",
+      "emoji": "🌱",
+      "varietes": [
+        { "nom": "Argenteuil", "type": "ancienne", "description": "Blanche classique, douce, la plus cultivée en France" },
+        { "nom": "Backlim", "type": "hybride", "description": "Verte, productive, pour zones froides" },
+        { "nom": "Purple Pacific", "type": "violette", "description": "Violette, plus sucrée et tendre, moins amère" },
+        { "nom": "Mary Washington", "type": "ancienne", "description": "Verte, rustique, résistante à la rouille" }
+      ],
+      "calendrier": {
+        "plantation_griffes": [3, 4],
+        "recolte": [4, 5, 6]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré",
+        "sol": "Léger, sableux, bien drainé, profond",
+        "espacement": "40 cm sur le rang, 1.2m entre les rangs",
+        "temps_recolte_semaines": "Première récolte 2-3 ans après plantation (patience !)"
+      },
+      "associations": {
+        "benefiques": ["tomate, persil, basilic"],
+        "nefastes": ["oignon, ail, poireau"]
+      },
+      "ravageurs": ["Criocère de l'asperge", "Rouille", "Fusariose"],
+      "conseils": [
+        "Investissement long terme : une aspergerie peut produire 20 ans",
+        "Ne pas récolter les 2 premières années pour laisser le plant se développer",
+        "Arrêter la récolte fin juin pour laisser la fougère se développer",
+        "Butter pour obtenir des asperges blanches, laisser pousser pour des vertes",
+        "Acheter des griffes de 2 ans pour gagner du temps"
+      ],
+      "conservation": "3-4 jours au réfrigérateur debout dans 2cm d'eau.",
+      "empreinte_carbone": { "local": 0.4, "importe": 3.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "artichaut",
+      "nom": "Artichaut",
+      "nom_latin": "Cynara cardunculus var. scolymus",
+      "categorie": "Légumes tiges",
+      "emoji": "🌿",
+      "varietes": [
+        { "nom": "Violet de Provence", "type": "ancienne", "description": "Petit, violet, savoureux, productif, Sud" },
+        { "nom": "Gros Vert de Laon", "type": "ancienne", "description": "Gros, vert, rustique pour le Nord" },
+        { "nom": "Camus de Bretagne", "type": "ancienne", "description": "Le plus gros, vert, emblématique de Bretagne" },
+        { "nom": "Romanesco", "type": "ancienne", "description": "Allongé et épineux, traditionnel italien" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "plantation": [4, 5],
+        "recolte": [6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Régulier et abondant",
+        "sol": "Profond, riche, bien drainé",
+        "espacement": "80-100 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "Récolte dès la 1ère année pour certaines variétés"
+      },
+      "associations": {
+        "benefiques": ["tagetes", "bourrache"],
+        "nefastes": ["aucune connue"
+        ]
+      },
+      "ravageurs": ["Puceron noir", "Limaces", "Botrytis"],
+      "conseils": [
+        "Vivace — peut produire 5-10 ans, renouveler par les œilletons",
+        "Éclater les touffes tous les 3-4 ans pour maintenir la vigueur",
+        "Pailler copieusement en hiver dans les régions froides",
+        "Récolter avant que les écailles commencent à s'ouvrir"
+      ],
+      "conservation": "4-5 jours au réfrigérateur. Cœurs en conserve dans l'huile.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "pois",
+      "nom": "Petit pois / Pois mangetout",
+      "nom_latin": "Pisum sativum",
+      "categorie": "Légumineuses",
+      "emoji": "🟢",
+      "varietes": [
+        { "nom": "Douce Provence", "type": "petit_pois", "description": "Nain, hâtif, doux, excellente saveur" },
+        { "nom": "Merveille de Kelvedon", "type": "petit_pois", "description": "Résistant au froid, précoce, très savoureux" },
+        { "nom": "Sugar Snap", "type": "mangetout", "description": "Cosse épaisse et croquante, très sucrée, à manger entière" },
+        { "nom": "Carouby de Maussane", "type": "mangetout", "description": "Grandes gousses plates, grimpant, productif" },
+        { "nom": "Lincoln", "type": "petit_pois", "description": "Héritage américain, résistant à la chaleur" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [2, 3, 4, 10, 11],
+        "recolte": [5, 6, 7]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre légère",
+        "arrosage": "Modéré, surtout à la floraison",
+        "sol": "Léger, drainé, peu riche (fixe l'azote)",
+        "espacement": "5-8 cm sur le rang, 50-80 cm entre rangs",
+        "profondeur_semis": "4-5 cm",
+        "germination_jours": "7-14",
+        "temps_recolte_semaines": "60-80 jours"
+      },
+      "associations": {
+        "benefiques": ["carotte", "radis", "laitue", "concombre"],
+        "nefastes": ["oignon", "ail", "fenouil"]
+      },
+      "ravageurs": ["Tordeuse des gousses", "Oïdium", "Pucerons"],
+      "conseils": [
+        "Semer tôt (mars) ou très tôt en automne (oct) pour éviter l'oïdium de l'été",
+        "Tuteurer les variétés grimpantes avec des branchages ou un filet",
+        "Récolter quand les gousses sont bien gonflées mais avant que les grains durcissent",
+        "Culture enrichissante : laisse l'azote dans le sol pour la culture suivante"
+      ],
+      "conservation": "2-3 jours au réfrigérateur. Excellent en congélation après blanchiment.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "mais",
+      "nom": "Maïs doux",
+      "nom_latin": "Zea mays var. saccharata",
+      "categorie": "Légumes tiges",
+      "emoji": "🌽",
+      "varietes": [
+        { "nom": "Golden Bantam", "type": "ancienne", "description": "Jaune, doux, un classique du jardin" },
+        { "nom": "Bloody Butcher", "type": "rouge", "description": "Grains rouges-bordeaux, très décoratif et comestible" },
+        { "nom": "Strawberry Corn", "type": "popcorn", "description": "Petits épis rouges pour popcorn, décoratif" },
+        { "nom": "Triple Sweet", "type": "hybride", "description": "Très sucré, nombreuses races disponibles" }
+      ],
+      "calendrier": {
+        "semis_interieur": [4],
+        "semis_exterieur": [5],
+        "recolte": [8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Abondant en été",
+        "sol": "Riche, profond, bien drainé",
+        "espacement": "30-40 cm sur le rang, 60-80 cm entre rangs",
+        "profondeur_semis": "3-4 cm",
+        "germination_jours": "7-12",
+        "temps_recolte_semaines": "80-100 jours"
+      },
+      "associations": {
+        "benefiques": ["haricot, courge — les 3 Sœurs amérindiennes"],
+        "nefastes": ["betterave"]
+      },
+      "ravageurs": ["Pyrale du maïs", "Sésamie", "Pucerons"],
+      "conseils": [
+        "Planter en bloc (4×4 minimum) et non en rang unique — pollinisation par le vent",
+        "La technique des 3 sœurs (maïs + haricot grimpant + courge) est très efficace",
+        "Récolter quand les soies sont brunes et que les grains sont bien formés",
+        "Cuisiner dans l'heure qui suit la récolte — les sucres se transforment très vite"
+      ],
+      "conservation": "24-48h maxi après récolte. Congeler les épis blanchis.",
+      "empreinte_carbone": { "local": 0.3, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "celeri_branche",
+      "nom": "Céleri branche",
+      "nom_latin": "Apium graveolens var. dulce",
+      "categorie": "Légumes tiges",
+      "emoji": "🌿",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Tall Utah", "type": "classique", "description": "Côtes longues et croquantes, très populaire" },
+        { "nom": "Golden Self-Blanching", "type": "autobutant", "description": "Jaunît naturellement sans buttage, plus doux" },
+        { "nom": "Giant Red", "type": "rouge", "description": "Côtes rouges décoratifs, saveur intense" },
+        { "nom": "Tango", "type": "hybride", "description": "Compact, idéal en jardinière, résistant aux maladies" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "repiquage": [5, 6],
+        "recolte": [8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Abondant et régulier — très gourmand en eau",
+        "sol": "Riche, humide, bien travaillé",
+        "espacement": "30-40 cm",
+        "profondeur_semis": "0.3 cm (lumière nécessaire à la germination — ne pas recouvrir)",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "120-150 jours après semis"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 20,
+        "profondeur_min_cm": 30,
+        "conseil": "Grand bac de 20L minimum, arrosage quotidien en été indispensable"
+      },
+      "associations": {
+        "benefiques": ["poireau", "tomate", "chou", "haricot"],
+        "nefastes": ["carvi", "persil (compétition)"]
+      },
+      "ravageurs": ["Mouche du céleri", "Septoriose", "Pucerons"],
+      "conseils": [
+        "Butter les côtes 2-3 semaines avant récolte pour les blanchir et adoucir leur goût",
+        "La germination est longue et capricieuse : garder à 18°C et humide",
+        "Pincer les fleurs pour concentrer la croissance dans les côtes",
+        "Très gourmand en eau et en compost — fertiliser toutes les 3 semaines",
+        "Couvrir d'un voile anti-insectes contre la mouche du céleri"
+      ],
+      "conservation": "2-3 semaines au réfrigérateur. Congèle bien en dés blanchis.",
+      "empreinte_carbone": { "local": 0.25, "importe": 1.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "celeri_rave",
+      "nom": "Céleri-rave",
+      "nom_latin": "Apium graveolens var. rapaceum",
+      "categorie": "Légumes racines",
+      "emoji": "🟤",
+      "jardiniere": false,
+      "varietes": [
+        { "nom": "Monarch", "type": "hybride", "description": "Lisse, gros, bonne conservation" },
+        { "nom": "Prinz", "type": "hybride", "description": "Très lisse, peu de radicelles, facilité d'épluchage" },
+        { "nom": "Diamant", "type": "hybride", "description": "Résistant au botrytis, productive" },
+        { "nom": "Ibis", "type": "classique", "description": "Gros bulbe régulier, saveur intense" }
+      ],
+      "calendrier": {
+        "semis_interieur": [2, 3],
+        "repiquage": [5, 6],
+        "recolte": [9, 10, 11, 12]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Régulier et abondant",
+        "sol": "Riche, profond, frais",
+        "espacement": "35-40 cm",
+        "profondeur_semis": "0.3 cm (lumière nécessaire)",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "150-180 jours après semis"
+      },
+      "associations": {
+        "benefiques": ["poireau", "tomate", "chou"],
+        "nefastes": ["persil", "carvi"]
+      },
+      "ravageurs": ["Mouche du céleri", "Septoriose", "Limaces"],
+      "conseils": [
+        "Culture longue (6 mois) — semer tôt dès février sous abri",
+        "Ne pas enterrer le bulbe : laisser la moitié hors du sol pour qu'il grossisse",
+        "Supprimer les feuilles latérales inférieures pour favoriser le bulbe",
+        "Résiste aux premières gelées légères — peut rester en terre jusqu'en décembre"
+      ],
+      "conservation": "Plusieurs mois en cave dans du sable, entre 2 et 5°C.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.2, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "origan",
+      "nom": "Origan",
+      "nom_latin": "Origanum vulgare",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Vulgare", "type": "classique", "description": "L'origan commun, très rustique, saveur douce" },
+        { "nom": "Compactum", "type": "compact", "description": "Port bas et dense, idéal en jardinière ou bordure" },
+        { "nom": "Heracleoticum (grec)", "type": "culinaire", "description": "Le vrai origan grec, arôme intense, pour pizzas et viandes" },
+        { "nom": "Aureum", "type": "decoratif", "description": "Feuilles dorées, décoratif, légèrement moins aromatique" },
+        { "nom": "Marjolaine (proche)", "type": "culinaire", "description": "Plus douce et sucrée que l'origan, très utilisée en cuisine" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [4, 5, 9],
+        "recolte": [5, 6, 7, 8, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Peu — xérophile méditerranéen",
+        "sol": "Pauvre, calcaire, très drainé",
+        "espacement": "25-30 cm",
+        "germination_jours": "10-15",
+        "temps_recolte_semaines": "Vivace, récolte dès la 1ère année"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 3,
+        "profondeur_min_cm": 15,
+        "conseil": "Excellent en pot ou jardinière avec thym et romarin — même conditions de culture"
+      },
+      "associations": {
+        "benefiques": ["tomate", "poivron", "aubergine", "chou"],
+        "nefastes": ["plantes à besoin d'humidité élevée"]
+      },
+      "ravageurs": ["Très résistant — pratiquement aucun ravageur"],
+      "conseils": [
+        "Vivace rustique jusqu'à -20°C — revient chaque année avec vigueur",
+        "Récolter juste avant ou pendant la floraison pour l'arôme maximal",
+        "Tailler après floraison pour maintenir un port compact",
+        "L'origan grec (heracleoticum) est bien plus aromatique que l'origan commun",
+        "Très mellifère : attire de nombreux pollinisateurs"
+      ],
+      "conservation": "Séchage très facile — conserver en bocal hermétique jusqu'à 2 ans.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "serpolet",
+      "nom": "Serpolet (Thym sauvage)",
+      "nom_latin": "Thymus serpyllum",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Album", "type": "blanc", "description": "Fleurs blanches, rampant, couvre-sol délicat" },
+        { "nom": "Coccineus", "type": "rouge", "description": "Fleurs rouge carmin éclatant, très décoratif" },
+        { "nom": "Magic Carpet", "type": "compact", "description": "Rose-lilas, très dense, idéal entre les pavés" },
+        { "nom": "Lemon Curd", "type": "citron", "description": "Notes citronnées, feuilles jaune-vert" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [4, 5, 9],
+        "recolte": [4, 5, 6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Très peu",
+        "sol": "Pauvre, sec, drainé, calcaire",
+        "espacement": "20-30 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "Vivace rampant, récolte dès installation"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 2,
+        "profondeur_min_cm": 10,
+        "conseil": "Idéal en jardinière peu profonde ou en couvre-sol entre des dalles"
+      },
+      "associations": {
+        "benefiques": ["chou", "courgette", "tomate — répulsif général"],
+        "nefastes": ["plantes aimant l'humidité"]
+      },
+      "ravageurs": ["Pratiquement aucun"],
+      "conseils": [
+        "Couvre-sol idéal entre les dalles d'un chemin ou en rocaille — supporte le piétinement léger",
+        "Floraison très mellifère en juin-juillet",
+        "Goût plus doux et floral que le thym commun",
+        "Rusticité excellente : -25°C sans dommage",
+        "Se propage naturellement par marcottage — ne devient jamais envahissant"
+      ],
+      "conservation": "Séchage parfait. Frais : 1 semaine au réfrigérateur.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "marjolaine",
+      "nom": "Marjolaine",
+      "nom_latin": "Origanum majorana",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Commune", "type": "classique", "description": "Douce et sucrée, plus délicate que l'origan" },
+        { "nom": "Pot Marjoram", "type": "compact", "description": "Compact, vivace en doux climat, idéal en pot" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [5, 6],
+        "recolte": [6, 7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil, chaleur",
+        "arrosage": "Modéré",
+        "sol": "Léger, drainé",
+        "espacement": "25 cm",
+        "germination_jours": "10-14",
+        "temps_recolte_semaines": "Annuelle ou bisannuelle selon la zone"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 3,
+        "profondeur_min_cm": 15,
+        "conseil": "Très bien en pot, rentrer en hiver dans les régions froides"
+      },
+      "associations": {
+        "benefiques": ["tomate", "poivron", "légumes en général"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Pucerons (rare)", "Botrytis si excès d'humidité"],
+      "conseils": [
+        "Moins rustique que l'origan — rentrer en pot sous les -5°C",
+        "Saveur plus douce et sucrée que l'origan, parfaite pour les farces et les soupes",
+        "Récolter avant floraison pour l'arôme maximal",
+        "Sécher facilement en bouquet"
+      ],
+      "conservation": "Séchage excellent. Frais : 3-4 jours au réfrigérateur.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "hysope",
+      "nom": "Hysope",
+      "nom_latin": "Hyssopus officinalis",
+      "categorie": "Herbes aromatiques",
+      "emoji": "💜",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Bleue", "type": "classique", "description": "Fleurs bleu-violet, arôme camphré-mentholé" },
+        { "nom": "Alba", "type": "blanche", "description": "Fleurs blanches, saveur plus douce" },
+        { "nom": "Rosea", "type": "rose", "description": "Fleurs roses, légèrement moins aromatique" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [4, 5, 9],
+        "recolte": [6, 7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Très peu — xérophile",
+        "sol": "Calcaire, pauvre, drainé",
+        "espacement": "30-40 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "Vivace, récolte dès la 1ère année"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 5,
+        "profondeur_min_cm": 20,
+        "conseil": "Parfait en bac avec romarin, thym et sauge"
+      },
+      "associations": {
+        "benefiques": ["chou — repousse piéride", "vigne", "raisin"],
+        "nefastes": ["radis (inhibition)"]
+      },
+      "ravageurs": ["Très résistante"],
+      "conseils": [
+        "Vivace rustique à -20°C, semi-arbustive",
+        "Excellent répulsif contre la piéride du chou",
+        "Très mellifère — abeilles et papillons l'adorent",
+        "Utilisée en chartreuse et liqueurs depuis le Moyen-Âge",
+        "Tailler en mars pour rajeunir et maintenir compact"
+      ],
+      "conservation": "Séchage facile en bouquet.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "verveine_citronnelle",
+      "nom": "Verveine citronnelle",
+      "nom_latin": "Aloysia citrodora",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Commune", "type": "classique", "description": "La seule espèce cultivée, arôme citron intense" }
+      ],
+      "calendrier": {
+        "plantation": [5, 6],
+        "recolte": [6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil, chaleur",
+        "arrosage": "Modéré",
+        "sol": "Léger, drainé",
+        "espacement": "60-80 cm (arbuste)",
+        "temps_recolte_semaines": "Arbuste vivace, récolte dès installation"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 15,
+        "profondeur_min_cm": 30,
+        "conseil": "En grand pot, rentrer à l'abri du gel en hiver (sensible en dessous de -5°C)"
+      },
+      "associations": {
+        "benefiques": ["tomate", "légumes en général — répulsif odorant"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Pucerons blancs", "Aleurodes"],
+      "conseils": [
+        "Pas rustique en dessous de -5°C : cultiver en pot pour hiverner sous abri",
+        "Arôme citronné extraordinairement puissant — une feuille suffit pour une infusion",
+        "Perdre ses feuilles en hiver est normal — ne pas confondre avec la mort",
+        "Tailler de moitié au printemps pour un port buissonnant",
+        "Infusion digestive, antistress, excellent dépuratif"
+      ],
+      "conservation": "Séchage parfait, conserve l'arôme citronné plusieurs mois.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "fenouil_aromatique",
+      "nom": "Fenouil",
+      "nom_latin": "Foeniculum vulgare",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🌿",
+      "jardiniere": false,
+      "varietes": [
+        { "nom": "Bronze", "type": "decoratif", "description": "Feuillage bronze-cuivré spectaculaire, aromatique" },
+        { "nom": "Dulce (Florence)", "type": "legume", "description": "Bulbe blanc charnu comestible, version légume" },
+        { "nom": "Commun Vert", "type": "aromatique", "description": "Graines et feuilles anisées, très utilisé en cuisine méditerranéenne" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [4, 5],
+        "plantation": [4, 5],
+        "recolte": [7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré",
+        "sol": "Drainé, profond",
+        "espacement": "40-50 cm",
+        "germination_jours": "10-14",
+        "temps_recolte_semaines": "80-100 jours"
+      },
+      "associations": {
+        "benefiques": ["aucune — isoler des autres plantes"],
+        "nefastes": ["PRESQUE TOUT : tomate, coriandre, carotte, haricot, poivron — allélopathie forte"]
+      },
+      "ravageurs": ["Chenilles du Machaon (protéger si possible)", "Pucerons"],
+      "conseils": [
+        "⚠️ Planter EN ISOLATION — le fenouil inhibe la croissance de la plupart des légumes",
+        "Dédier une zone à l'écart du potager principal",
+        "Le feuillage bronze est très décoratif en massif ornemental",
+        "Graines récoltées en automne : saveur anisée intense pour la cuisine",
+        "Les larves du Papillon Machaon se nourrissent des feuilles — ne pas traiter"
+      ],
+      "conservation": "Graines séchées en bocal. Feuilles fraîches 2-3 jours.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "framboisier",
+      "nom": "Framboisier",
+      "nom_latin": "Rubus idaeus",
+      "categorie": "Fruits rouges",
+      "emoji": "🫐",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Malling Jewel", "type": "ete", "description": "Précoce, gros fruits rouges, excellente saveur" },
+        { "nom": "Heritage", "type": "remontante", "description": "Remontante — 2 récoltes : juillet et septembre-octobre" },
+        { "nom": "Autumn Bliss", "type": "remontante", "description": "Remontante, très productive, résistante aux maladies" },
+        { "nom": "Fallgold", "type": "jaune", "description": "Fruits jaune-dorés, très doux et sucrés, original" },
+        { "nom": "Polka", "type": "remontante", "description": "Gros fruits fermes, transport facile, très productive" }
+      ],
+      "calendrier": {
+        "plantation": [10, 11, 3, 4],
+        "recolte_ete": [6, 7],
+        "recolte_automne": [9, 10]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre légère",
+        "arrosage": "Régulier, surtout en été",
+        "sol": "Riche, légèrement acide (pH 5.5-6.5), drainé",
+        "espacement": "40-50 cm sur le rang, 1.5m entre les rangs",
+        "profondeur_plantation": "15 cm",
+        "temps_recolte_semaines": "Récolte dès la 1ère année pour les remontantes"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 30,
+        "profondeur_min_cm": 40,
+        "conseil": "Grand bac de 30L minimum, tuteur ou palissage nécessaire, arrosage régulier"
+      },
+      "associations": {
+        "benefiques": ["ail", "tagetes", "lavande"],
+        "nefastes": ["fraisier (maladies communes)", "pomme_de_terre"]
+      },
+      "ravageurs": ["Botrytis", "Pucerons", "Drosophile suzukii (mouche asiatique)", "Ver de framboise"],
+      "conseils": [
+        "Palissage sur 2-3 fils tendus entre des piquets — indispensable",
+        "Couper les cannes ayant fruité au ras du sol après la récolte d'été",
+        "Pour les remontantes : couper TOUT au ras du sol en février — plus simple, récolte unique en automne",
+        "Pailler généreusement pour conserver l'humidité et limiter les mauvaises herbes",
+        "Éviter de planter là où il y avait des pommes de terre (même maladie)"
+      ],
+      "conservation": "24-48h au réfrigérateur. Excellent en congélation (fruits entiers).",
+      "empreinte_carbone": { "local": 0.6, "importe": 5.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "cassissier",
+      "nom": "Cassissier",
+      "nom_latin": "Ribes nigrum",
+      "categorie": "Fruits rouges",
+      "emoji": "🫐",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Ben Lomond", "type": "tardif", "description": "Gros grains, tardif, résistant aux maladies" },
+        { "nom": "Noir de Bourgogne", "type": "ancienne", "description": "Arôme intense, la plus parfumée, excellente en crème" },
+        { "nom": "Titania", "type": "robuste", "description": "Très productive, résistante, polyvalente" },
+        { "nom": "Andega", "type": "compact", "description": "Port compact, idéal en jardinière" }
+      ],
+      "calendrier": {
+        "plantation": [10, 11, 3],
+        "recolte": [7, 8]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Régulier",
+        "sol": "Riche, frais, légèrement acide",
+        "espacement": "1.2-1.5m entre les plants",
+        "temps_recolte_semaines": "Arbuste pérenne, récolte dès la 2ème année"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 40,
+        "profondeur_min_cm": 40,
+        "conseil": "Grand bac de 40L, variété compacte type Andega, fertilisation régulière"
+      },
+      "associations": {
+        "benefiques": ["tagetes", "ail", "bourrache"],
+        "nefastes": ["groseillier (maladies communes à surveiller)"]
+      },
+      "ravageurs": ["Acarien du bourgeon (grande nuisance)", "Tenthrède", "Botrytis", "Blanc du groseillier"],
+      "conseils": [
+        "Planter en automne de préférence — meilleure reprise",
+        "Tailler après récolte : supprimer les vieilles branches (plus de 3 ans) au profit des jeunes pousses",
+        "Les bourgeons gonflés anormalement = acarien du bourgeon → arracher et brûler les rameaux touchés",
+        "Un cassissier bien entretenu produit 10-15 ans",
+        "Riche en vitamine C et antioxydants — bien plus que les oranges"
+      ],
+      "conservation": "2-3 jours au réfrigérateur. Excellent en congélation, gelée, sirop ou crème de cassis.",
+      "empreinte_carbone": { "local": 0.5, "importe": 4.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "groseillier",
+      "nom": "Groseillier rouge",
+      "nom_latin": "Ribes rubrum",
+      "categorie": "Fruits rouges",
+      "emoji": "🍇",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Jonkheer van Tets", "type": "precoce", "description": "Très précoce, gros grains rouges, légèrement acide" },
+        { "nom": "Rovada", "type": "tardif", "description": "Tardif, très productif, longues grappes" },
+        { "nom": "Versaillaise Blanche", "type": "blanche", "description": "Groseille blanche plus douce, originale" },
+        { "nom": "Rolan", "type": "compact", "description": "Port retombant, décoratif, en pot ou palissé" }
+      ],
+      "calendrier": {
+        "plantation": [10, 11, 3],
+        "recolte": [6, 7, 8]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre — supporte mieux l'ombre que le cassis",
+        "arrosage": "Modéré",
+        "sol": "Frais, bien drainé",
+        "espacement": "1.2m entre les plants",
+        "temps_recolte_semaines": "Arbuste pérenne, récolte dès la 2ème année"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 30,
+        "profondeur_min_cm": 35,
+        "conseil": "Bac de 30L, palissage ou port pleureur, arrosage régulier en été"
+      },
+      "associations": {
+        "benefiques": ["tagetes", "ail"],
+        "nefastes": ["cassis (surveiller maladies communes)"]
+      },
+      "ravageurs": ["Blanc du groseillier (oïdium)", "Tenthrède verte", "Pucerons"],
+      "conseils": [
+        "Très facile et rustique — résiste à des gelées de -25°C",
+        "Tailler en gobelet pour aérer la touffe — évite les maladies",
+        "Récolter les grappes entières à maturité complète",
+        "Peut être palissé en espalier contre un mur pour économiser la place",
+        "Longévité de 15-20 ans avec un bon entretien"
+      ],
+      "conservation": "3-4 jours au réfrigérateur. Congèle parfaitement. Gelée et sirop maison.",
+      "empreinte_carbone": { "local": 0.4, "importe": 4.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "myrtille",
+      "nom": "Myrtille (Airelle géante)",
+      "nom_latin": "Vaccinium corymbosum",
+      "categorie": "Fruits rouges",
+      "emoji": "🫐",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Bluecrop", "type": "mi-saison", "description": "La plus cultivée, productive, gros fruits" },
+        { "nom": "Patriot", "type": "precoce", "description": "Précoce, résistant au froid, gros fruits" },
+        { "nom": "Sunshine Blue", "type": "compact", "description": "Compact (1m), idéal en pot, autofertile" },
+        { "nom": "Pink Lemonade", "type": "original", "description": "Baies roses, saveur unique, décoratif" }
+      ],
+      "calendrier": {
+        "plantation": [10, 11, 3, 4],
+        "recolte": [7, 8, 9]
+      },
+      "culture": {
+        "exposition": "Plein soleil ou mi-ombre légère",
+        "arrosage": "Régulier avec eau de pluie de préférence — déteste le calcaire",
+        "sol": "ACIDE impératif (pH 4-5), riche en matière organique, drainé",
+        "espacement": "1.5m entre les plants",
+        "temps_recolte_semaines": "Arbuste pérenne, récolte à partir de la 3ème année"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 30,
+        "profondeur_min_cm": 40,
+        "conseil": "Impératif : substrat spécial myrtille ou mélange tourbe/terre de bruyère. Eau de pluie exclusivement."
+      },
+      "associations": {
+        "benefiques": ["azalée (même conditions)", "bruyère"],
+        "nefastes": ["tout légume en sol calcaire — exigences incompatibles"]
+      },
+      "ravageurs": ["Drosophile suzukii", "Oiseaux (filet indispensable)"],
+      "conseils": [
+        "⚠️ Sol acide OBLIGATOIRE (pH 4-5) — le point le plus important",
+        "Planter 2 variétés différentes pour une meilleure pollinisation croisée",
+        "Arroser exclusivement à l'eau de pluie ou eau déminéralisée",
+        "Pailler avec de l'écorce de pin ou des feuilles de chêne pour acidifier",
+        "Un plant bien établi peut produire 20-30 ans"
+      ],
+      "conservation": "3-5 jours au réfrigérateur. Congélation parfaite.",
+      "empreinte_carbone": { "local": 0.6, "importe": 6.0, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "mûrier",
+      "nom": "Mûrier sans épines",
+      "nom_latin": "Rubus fruticosus",
+      "categorie": "Fruits rouges",
+      "emoji": "🫐",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Thornfree", "type": "sans_epines", "description": "Sans épines, très productif, gros fruits" },
+        { "nom": "Loch Ness", "type": "compact", "description": "Semi-dressé, peu envahissant, excellent en pot" },
+        { "nom": "Apache", "type": "sans_epines", "description": "Très gros fruits, doux, sans épines" },
+        { "nom": "Oregon Thornless", "type": "sans_epines", "description": "Feuillage décoratif très découpé, fruits savoureux" }
+      ],
+      "calendrier": {
+        "plantation": [10, 11, 3, 4],
+        "recolte": [8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Modéré à régulier",
+        "sol": "Tout type, même pauvre",
+        "espacement": "2-3m (palissé)",
+        "temps_recolte_semaines": "Récolte dès la 2ème année"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 40,
+        "profondeur_min_cm": 40,
+        "conseil": "Variété Loch Ness recommandée en pot, palissage sur treillage indispensable"
+      },
+      "associations": {
+        "benefiques": ["tagetes"],
+        "nefastes": ["framboisier (espace et maladies)"]
+      },
+      "ravageurs": ["Drosophile suzukii", "Botrytis si temps humide"],
+      "conseils": [
+        "Palissage indispensable : tendre 3-4 fils à 40cm d'intervalle",
+        "Couper les cannes ayant fruité après récolte",
+        "Choisir IMPÉRATIVEMENT une variété sans épines pour le jardin familial",
+        "Très productif — un seul plant peut donner 3-5 kg par an",
+        "Récolter à pleine maturité (noir profond) — les mûres rouges sont acides"
+      ],
+      "conservation": "24-48h au réfrigérateur. Congèle très bien.",
+      "empreinte_carbone": { "local": 0.4, "importe": 4.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "rhubarbe",
+      "nom": "Rhubarbe",
+      "nom_latin": "Rheum × hybridum",
+      "categorie": "Légumes tiges",
+      "emoji": "🌱",
+      "jardiniere": false,
+      "varietes": [
+        { "nom": "Victoria", "type": "ancienne", "description": "La plus répandue, tiges vertes et rouges, productive" },
+        { "nom": "Frambozen Rood", "type": "rouge", "description": "Tiges très rouges, spectaculaires, goût doux" },
+        { "nom": "Champagne Early", "type": "precoce", "description": "Très précoce, tiges fines et tendres" },
+        { "nom": "Glaskins Perpetual", "type": "remontante", "description": "Production quasi continue, moins de repos imposé" }
+      ],
+      "calendrier": {
+        "plantation": [3, 4, 10, 11],
+        "recolte": [4, 5, 6, 7]
+      },
+      "culture": {
+        "exposition": "Soleil ou mi-ombre",
+        "arrosage": "Modéré",
+        "sol": "Profond, riche, bien drainé",
+        "espacement": "80-100 cm",
+        "temps_recolte_semaines": "Vivace — ne pas récolter la 1ère année, récolte partielle la 2ème"
+      },
+      "associations": {
+        "benefiques": ["ail", "oignon"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Très résistante — peu de ravageurs"],
+      "conseils": [
+        "⚠️ Feuilles TOXIQUES — ne consommer que les tiges",
+        "Vivace très longévive : un pied peut produire 15-20 ans",
+        "Ne jamais récolter plus du tiers des tiges à la fois",
+        "Arrêter la récolte fin juin pour laisser le plant se refaire",
+        "Diviser la touffe tous les 5-6 ans pour la rajeunir"
+      ],
+      "conservation": "1 semaine au réfrigérateur. Congèle parfaitement en dés.",
+      "empreinte_carbone": { "local": 0.2, "importe": 1.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "physalis",
+      "nom": "Physalis (Alkékenge / Cap gooseberry)",
+      "nom_latin": "Physalis peruviana / alkekengi",
+      "categorie": "Fruits rouges",
+      "emoji": "🟠",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Peruviana (comestible)", "type": "comestible", "description": "Baies dorées dans une enveloppe papier, goût exotique sucré-acidulé" },
+        { "nom": "Alkekengi (lanterne)", "type": "decoratif", "description": "Lanternes orangées décoratives, baies peu comestibles" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [5, 6],
+        "recolte": [8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil",
+        "arrosage": "Modéré",
+        "sol": "Léger, drainé",
+        "espacement": "50-60 cm",
+        "germination_jours": "14-21",
+        "temps_recolte_semaines": "90-120 jours"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 10,
+        "profondeur_min_cm": 25,
+        "conseil": "Pot de 10L minimum, exposition chaude et abritée"
+      },
+      "associations": {
+        "benefiques": ["tomate", "basilic"],
+        "nefastes": ["aucune connue"]
+      },
+      "ravageurs": ["Pucerons", "Limaces sur jeunes plants"],
+      "conseils": [
+        "Récolter uniquement quand l'enveloppe (calice) est sèche et brune",
+        "Les baies se conservent longtemps dans leur calice papier",
+        "Très décoratif — les lanternes orangées sont magnifiques en automne",
+        "L'alkekengi se ressème spontanément et peut devenir envahissant en sol léger"
+      ],
+      "conservation": "Plusieurs semaines dans leur calice à température ambiante.",
+      "empreinte_carbone": { "local": 0.4, "importe": 3.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "tomate_cerise_grimpante",
+      "nom": "Tomate cerise grimpante (balcon)",
+      "nom_latin": "Solanum lycopersicum var. cerasiforme",
+      "categorie": "Légumes fruits",
+      "emoji": "🍅",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Tumbling Tom Red", "type": "retombant", "description": "Retombante, idéale en suspension, très productive" },
+        { "nom": "Tumbling Tom Yellow", "type": "retombant", "description": "Version jaune, douce et sucrée, en suspension" },
+        { "nom": "Sweet Million", "type": "grimpant", "description": "Grappes énormes de petits fruits, tuteur nécessaire" },
+        { "nom": "Tiny Tim", "type": "nain", "description": "Nain (30cm), pas de taille requise, pot ou rebord" }
+      ],
+      "calendrier": {
+        "semis_interieur": [3, 4],
+        "plantation": [5, 6],
+        "recolte": [7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Plein soleil (min. 6h)",
+        "arrosage": "Régulier, quotidien en pot par forte chaleur",
+        "sol": "Substrat universel enrichi",
+        "espacement": "1 plant par pot de 15L",
+        "germination_jours": "7-14",
+        "temps_recolte_semaines": "65-80 jours après repiquage"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 15,
+        "profondeur_min_cm": 30,
+        "conseil": "Arrosage quotidien en été (voire 2x/jour par canicule), fertilisation hebdomadaire tomate"
+      },
+      "associations": {
+        "benefiques": ["basilic", "ciboulette", "tagetes"],
+        "nefastes": ["fenouil"]
+      },
+      "ravageurs": ["Pucerons", "Mildiou", "Aleurodes"],
+      "conseils": [
+        "Les variétés retombantes (Tumbling Tom) ne demandent pas de taille — parfaites pour débutants",
+        "Fertiliser toutes les semaines avec un engrais spécial tomates",
+        "En suspension sur un balcon : vérifier le poids (pot plein = 15-20 kg)",
+        "Arroser abondamment plutôt que fréquemment pour éviter l'éclatement des fruits"
+      ],
+      "conservation": "À température ambiante, jamais au réfrigérateur. 4-5 jours.",
+      "empreinte_carbone": { "local": 0.3, "importe": 3.5, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "laitue_jardiniere",
+      "nom": "Laitue coupée (balcon & jardinière)",
+      "nom_latin": "Lactuca sativa var. crispa",
+      "categorie": "Légumes feuilles",
+      "emoji": "🥬",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Mélange mesclun", "type": "melange", "description": "Mix de laitues, roquette, mâche, chicorée — très pratique" },
+        { "nom": "Lollo Bionda", "type": "feuille", "description": "Frisée verte, coupe-et-revient, productive" },
+        { "nom": "Oak Leaf Red", "type": "feuille", "description": "Feuilles rouges en forme de chêne, très décorative" },
+        { "nom": "Salad Bowl", "type": "feuille", "description": "Feuilles ondulées vert clair, résiste bien à la chaleur" }
+      ],
+      "calendrier": {
+        "semis_exterieur": [3, 4, 5, 8, 9],
+        "recolte": [4, 5, 6, 7, 9, 10, 11]
+      },
+      "culture": {
+        "exposition": "Mi-ombre à soleil (ombre bienvenue en été)",
+        "arrosage": "Régulier, arroser au pied",
+        "sol": "Substrat universel, bon drainage",
+        "espacement": "15-20 cm ou semis dense pour couper",
+        "germination_jours": "5-8",
+        "temps_recolte_semaines": "30-45 jours"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 5,
+        "profondeur_min_cm": 15,
+        "conseil": "Jardinière peu profonde suffit. Renouveler le semis toutes les 3 semaines pour une production continue."
+      },
+      "associations": {
+        "benefiques": ["radis", "fraisier", "ciboulette"],
+        "nefastes": ["aucune"]
+      },
+      "ravageurs": ["Limaces", "Pucerons"],
+      "conseils": [
+        "Couper à 3-4 cm du sol — repousse 3 à 4 fois",
+        "Semer dense et récolter en éclaircissant progressivement",
+        "Idéal en rebord de fenêtre ou balcon ombragé en été",
+        "Associer plusieurs variétés pour un bac décoratif et savoureux"
+      ],
+      "conservation": "3-4 jours au réfrigérateur dans un torchon humide.",
+      "empreinte_carbone": { "local": 0.15, "importe": 1.8, "unite": "kg CO2/kg" }
+    },
+
+    {
+      "id": "herbes_balcon",
+      "nom": "Herbes aromatiques en balcon (kit)",
+      "nom_latin": "Mix aromatiques",
+      "categorie": "Herbes aromatiques",
+      "emoji": "🪴",
+      "jardiniere": true,
+      "varietes": [
+        { "nom": "Basilic Grand Vert", "type": "annuel", "description": "Incontournable, plein soleil, chaud" },
+        { "nom": "Persil Plat", "type": "bisannuel", "description": "Mi-ombre possible, arrosage régulier" },
+        { "nom": "Ciboulette", "type": "vivace", "description": "Facile, mi-ombre, revient chaque année" },
+        { "nom": "Thym Citron", "type": "vivace", "description": "Plein soleil, peu d'arrosage" },
+        { "nom": "Menthe Poivrée", "type": "vivace", "description": "Mi-ombre, toujours en pot isolé" },
+        { "nom": "Coriandre Calypso", "type": "annuel", "description": "Mi-ombre, semis successifs" },
+        { "nom": "Romarin", "type": "vivace", "description": "Plein soleil, peu d'eau, grand pot" }
+      ],
+      "calendrier": {
+        "plantation": [4, 5, 6],
+        "recolte": [5, 6, 7, 8, 9, 10]
+      },
+      "culture": {
+        "exposition": "Variable selon les espèces — voir fiches individuelles",
+        "arrosage": "Variable — ne pas mélanger xérophiles (thym, romarin) avec hygrophiles (menthe, persil) dans le même bac",
+        "sol": "Substrat universel + sable pour les méditerranéennes",
+        "espacement": "1 pot par espèce recommandé",
+        "temps_recolte_semaines": "Quelques semaines après plantation"
+      },
+      "culture_jardiniere": {
+        "volume_min_litres": 5,
+        "profondeur_min_cm": 15,
+        "conseil": "Regrouper les aromatiques méditerranéennes ensemble (thym, romarin, origan, sauge) et les fraîches séparément (menthe, persil, cerfeuil)"
+      },
+      "associations": {
+        "benefiques": ["entre elles selon affinités"],
+        "nefastes": ["Ne pas mélanger méditerranéennes xérophiles avec hygrophiles"]
+      },
+      "ravageurs": ["Pucerons", "Cochenilles (balcon)"],
+      "conseils": [
+        "Règle d'or : regrouper les plantes aux besoins similaires dans le même bac",
+        "Méditerranéennes (thym, romarin, origan, sauge, lavande) : même bac, même régime sec",
+        "Fraîches (persil, ciboulette, cerfeuil, mélisse) : autre bac, arrosage régulier",
+        "Menthe : TOUJOURS seule dans son pot — envahit tout",
+        "Basilic : le plus sensible au froid — rentrer dès les nuits fraîches de septembre"
+      ],
+      "conservation": "Utiliser frais. Congeler en glaçons d'huile.",
+      "empreinte_carbone": { "local": 0.3, "importe": 2.5, "unite": "kg CO2/kg" }
+    }
+
+  ]
+}
