@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useRegion, Region } from "@/hooks/use-region";
 import { Home as HomeIcon } from "lucide-react";
+import Footer from "@/components/Footer";
 
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
@@ -93,6 +94,7 @@ function Router() {
         <Route path="/marches" component={MarketMap} />
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </>
   );
 }
