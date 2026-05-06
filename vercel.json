@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm --filter @workspace/legumes-saison build",
-  "outputDirectory": "artifacts/legumes-saison/dist",
+  "outputDirectory": "artifacts/legumes-saison/dist/public"
   "installCommand": "pnpm install",
   "framework": "vite"
 }
