@@ -1,12 +1,21 @@
 # Journal des modifications
 
-## Version 1.3 — Mai 2026
+## Version 1.1 — juin 2026
+
+### Nouveautés
+- Ajout outil statistiques - Umami.is
+- Ajout pages politique confidentialité & mentions légales
+
+## Version 1 — mai 2026
 
 ### Nouveautés
 - Cycles lunaires dans le calendrier de semis (nouvelles lunes, pleines lunes, saints de glace, risques de gel par région)
 - Footer sur toutes les pages avec navigation et météo en temps réel
 - Potager : ajout de plantes personnalisées libres (non issues du catalogue)
 - Section changelog sur la page d'accueil mise à jour sans passer par le code
+- Icône Accueil dans la barre de navigation
+- Calculateur de bilan carbone avec comparaison transport
+- Encyclopédie des plantes avec 57 fiches détaillées
 
 ### Améliorations
 - Catalogue du potager redimensionnable selon le contenu
@@ -15,20 +24,11 @@
 
 ---
 
-## Version 1.2 — Avril 2026
-
-### Nouveautés
-- Icône Accueil dans la barre de navigation
-- Calculateur de bilan carbone avec comparaison transport
-- Encyclopédie des plantes avec 57 fiches détaillées
-
 ### Corrections
 - Clé React dupliquée "transplant" dans le calendrier de semis
 - Calcul carbone affichait "-0.0 kg" (neutre affiché en gris)
 
 ---
-
-## Version 1.1 — Mars 2026
 
 ### Lancement initial
 - Calendrier saisonnier (consommer / planter par mois)
